@@ -154,6 +154,8 @@ namespace BatallaNaval
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox100)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox99)).BeginInit();
@@ -262,7 +264,7 @@ namespace BatallaNaval
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(21, 21);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(256, 537);
+            this.listBox1.Size = new System.Drawing.Size(256, 355);
             this.listBox1.TabIndex = 1;
             // 
             // button1
@@ -1525,7 +1527,7 @@ namespace BatallaNaval
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(48, 50);
             this.label12.TabIndex = 11;
-            this.label12.Text = "A";
+            this.label12.Text = "1";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
@@ -1536,7 +1538,7 @@ namespace BatallaNaval
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(50, 50);
             this.label11.TabIndex = 10;
-            this.label11.Text = "10";
+            this.label11.Text = "J";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label10
@@ -1547,7 +1549,7 @@ namespace BatallaNaval
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(48, 50);
             this.label10.TabIndex = 9;
-            this.label10.Text = "9";
+            this.label10.Text = "I";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
@@ -1558,7 +1560,7 @@ namespace BatallaNaval
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(48, 50);
             this.label9.TabIndex = 8;
-            this.label9.Text = "8";
+            this.label9.Text = "H";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
@@ -1569,7 +1571,7 @@ namespace BatallaNaval
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 50);
             this.label8.TabIndex = 7;
-            this.label8.Text = "7";
+            this.label8.Text = "G";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
@@ -1580,7 +1582,7 @@ namespace BatallaNaval
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 50);
             this.label7.TabIndex = 6;
-            this.label7.Text = "6";
+            this.label7.Text = "F";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
@@ -1591,7 +1593,7 @@ namespace BatallaNaval
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 50);
             this.label6.TabIndex = 5;
-            this.label6.Text = "5";
+            this.label6.Text = "E";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
@@ -1602,7 +1604,7 @@ namespace BatallaNaval
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 50);
             this.label5.TabIndex = 4;
-            this.label5.Text = "4";
+            this.label5.Text = "D";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
@@ -1613,7 +1615,7 @@ namespace BatallaNaval
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 50);
             this.label4.TabIndex = 3;
-            this.label4.Text = "3";
+            this.label4.Text = "C";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -1624,7 +1626,7 @@ namespace BatallaNaval
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 50);
             this.label3.TabIndex = 2;
-            this.label3.Text = "2";
+            this.label3.Text = "B";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -1635,7 +1637,7 @@ namespace BatallaNaval
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 50);
             this.label2.TabIndex = 1;
-            this.label2.Text = "1";
+            this.label2.Text = "A";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -1656,7 +1658,7 @@ namespace BatallaNaval
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(48, 51);
             this.label13.TabIndex = 12;
-            this.label13.Text = "B";
+            this.label13.Text = "2";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
@@ -1667,7 +1669,7 @@ namespace BatallaNaval
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(48, 47);
             this.label14.TabIndex = 13;
-            this.label14.Text = "C";
+            this.label14.Text = "3";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label15
@@ -1678,7 +1680,7 @@ namespace BatallaNaval
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(48, 50);
             this.label15.TabIndex = 14;
-            this.label15.Text = "D";
+            this.label15.Text = "4";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label16
@@ -1689,7 +1691,7 @@ namespace BatallaNaval
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(48, 50);
             this.label16.TabIndex = 15;
-            this.label16.Text = "E";
+            this.label16.Text = "5";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label17
@@ -1700,7 +1702,7 @@ namespace BatallaNaval
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(48, 50);
             this.label17.TabIndex = 16;
-            this.label17.Text = "F";
+            this.label17.Text = "6";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label18
@@ -1711,7 +1713,7 @@ namespace BatallaNaval
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(48, 50);
             this.label18.TabIndex = 17;
-            this.label18.Text = "G";
+            this.label18.Text = "7";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label19
@@ -1722,7 +1724,7 @@ namespace BatallaNaval
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(48, 50);
             this.label19.TabIndex = 18;
-            this.label19.Text = "H";
+            this.label19.Text = "8";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label20
@@ -1733,7 +1735,7 @@ namespace BatallaNaval
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(48, 50);
             this.label20.TabIndex = 19;
-            this.label20.Text = "I";
+            this.label20.Text = "9";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label21
@@ -1744,7 +1746,7 @@ namespace BatallaNaval
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(48, 52);
             this.label21.TabIndex = 20;
-            this.label21.Text = "J";
+            this.label21.Text = "10";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
@@ -1758,11 +1760,33 @@ namespace BatallaNaval
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Horizontal",
+            "Vertical"});
+            this.comboBox1.Location = new System.Drawing.Point(21, 489);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(256, 21);
+            this.comboBox1.TabIndex = 4;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(18, 450);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(47, 13);
+            this.label22.TabIndex = 5;
+            this.label22.Text = "Posición";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 683);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox1);
@@ -1872,6 +1896,7 @@ namespace BatallaNaval
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -2000,6 +2025,8 @@ namespace BatallaNaval
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label22;
     }
 }
 
