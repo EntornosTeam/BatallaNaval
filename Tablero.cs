@@ -13,23 +13,33 @@ namespace BatallaNaval
         public Tablero()
         {
             filas = new List<List <int>>() { };
-            filas.Add(new List<int>() { -1, -1, -1, -1, -1, -1, 2, 2, -1, -1, -1 });
-            filas.Add(new List<int>() { -1, -1, -1, -1, -1, -1, 3, 3, -1, -1, -1 });
-            filas.Add(new List<int>() { -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1 });
 
+            for (int i = 0; i < 10; i++)
+            {
 
+                List<int> columnas = new List<int>();
+                columnas.Add(-1);
+                filas.Add(columnas);
+            }
+            ComprobarCasilla("2,3");
+            
         }
 
-        public int comprobarCasilla(String casillaTocada) // "2, 5" -> tag
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="casillaTocada"></param>
+        /// <returns>Devuelve el valor de la casilla solicitada. Indice 0 = id del barco, o -1 si es agua. Indice 1 = estado de la casilla</returns>
+        public int ComprobarCasilla(String casillaTocada) // "2,5" -> tag
         {
             int[] tocada = Array.ConvertAll(casillaTocada.Split(','), s => Int32.Parse(s));
             return filas[tocada[0]][tocada[1]];
         }
 
 
-        public void recorrerTablero()
+        public void RecorrerTablero()
         {
-            int valor = comprobarCasilla("2, 5");
+            int valor = ComprobarCasilla("2, 5");
             foreach (List<int> fila in filas)
             {
                 foreach (int casilla in fila)

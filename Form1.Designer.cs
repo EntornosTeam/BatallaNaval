@@ -426,6 +426,7 @@ namespace BatallaNaval
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(530, 550);
             this.tableLayoutPanel1.TabIndex = 3;
+            this.tableLayoutPanel1.Click += new System.EventHandler(this.tableLayoutPanel1_Click);
             // 
             // pictureBox100
             // 
