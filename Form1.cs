@@ -22,8 +22,8 @@ namespace BatallaNaval
 
         private void AssignTag()
         {
-            int fila = 0;
-            int columna = 0;
+            int fila = 9;
+            int columna = 9;
             foreach (Control c in tableLayoutPanel1.Controls)
             {
                 PictureBox pb = c as PictureBox;
@@ -31,14 +31,14 @@ namespace BatallaNaval
                 {
                     pb.Tag = fila + "," + columna;
                     // fila++;
-                    if (columna == 9)
+                    if (columna == 0)
                     {
-                        columna = 1;
-                        fila++;
+                        columna = 9;
+                        fila--;
                     }
                     else
                     {
-                        columna++;
+                        columna--;
                     }
                     listBox1.Items.Add(pb.Tag);
                 }
@@ -57,14 +57,10 @@ namespace BatallaNaval
 
         }
 
-        private void tableLayoutPanel1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             PictureBox pb = sender as PictureBox;
-            if (pb != null)
-            {
-                
-            }
-
+            MessageBox.Show("Prueba" + pb.Tag);
         }
     }
 }

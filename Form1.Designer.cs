@@ -428,7 +428,6 @@ namespace BatallaNaval
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(530, 550);
             this.tableLayoutPanel1.TabIndex = 3;
-            this.tableLayoutPanel1.Click += new System.EventHandler(this.tableLayoutPanel1_Click);
             // 
             // pictureBox100
             // 
@@ -440,6 +439,7 @@ namespace BatallaNaval
             this.pictureBox100.Size = new System.Drawing.Size(48, 50);
             this.pictureBox100.TabIndex = 120;
             this.pictureBox100.TabStop = false;
+            this.pictureBox100.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox99
             // 
@@ -451,6 +451,7 @@ namespace BatallaNaval
             this.pictureBox99.Size = new System.Drawing.Size(46, 50);
             this.pictureBox99.TabIndex = 119;
             this.pictureBox99.TabStop = false;
+            this.pictureBox99.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox98
             // 
@@ -462,6 +463,7 @@ namespace BatallaNaval
             this.pictureBox98.Size = new System.Drawing.Size(46, 50);
             this.pictureBox98.TabIndex = 118;
             this.pictureBox98.TabStop = false;
+            this.pictureBox98.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox97
             // 
@@ -473,6 +475,7 @@ namespace BatallaNaval
             this.pictureBox97.Size = new System.Drawing.Size(46, 50);
             this.pictureBox97.TabIndex = 117;
             this.pictureBox97.TabStop = false;
+            this.pictureBox97.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox96
             // 
@@ -484,6 +487,7 @@ namespace BatallaNaval
             this.pictureBox96.Size = new System.Drawing.Size(46, 50);
             this.pictureBox96.TabIndex = 116;
             this.pictureBox96.TabStop = false;
+            this.pictureBox96.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox95
             // 
@@ -495,6 +499,7 @@ namespace BatallaNaval
             this.pictureBox95.Size = new System.Drawing.Size(46, 50);
             this.pictureBox95.TabIndex = 115;
             this.pictureBox95.TabStop = false;
+            this.pictureBox95.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox94
             // 
@@ -506,6 +511,7 @@ namespace BatallaNaval
             this.pictureBox94.Size = new System.Drawing.Size(46, 50);
             this.pictureBox94.TabIndex = 114;
             this.pictureBox94.TabStop = false;
+            this.pictureBox94.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox93
             // 
@@ -517,6 +523,7 @@ namespace BatallaNaval
             this.pictureBox93.Size = new System.Drawing.Size(46, 50);
             this.pictureBox93.TabIndex = 113;
             this.pictureBox93.TabStop = false;
+            this.pictureBox93.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox92
             // 
@@ -528,6 +535,7 @@ namespace BatallaNaval
             this.pictureBox92.Size = new System.Drawing.Size(46, 50);
             this.pictureBox92.TabIndex = 112;
             this.pictureBox92.TabStop = false;
+            this.pictureBox92.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox91
             // 
@@ -539,6 +547,7 @@ namespace BatallaNaval
             this.pictureBox91.Size = new System.Drawing.Size(46, 50);
             this.pictureBox91.TabIndex = 111;
             this.pictureBox91.TabStop = false;
+            this.pictureBox91.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox90
             // 
@@ -550,6 +559,7 @@ namespace BatallaNaval
             this.pictureBox90.Size = new System.Drawing.Size(48, 48);
             this.pictureBox90.TabIndex = 110;
             this.pictureBox90.TabStop = false;
+            this.pictureBox90.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox89
             // 
@@ -561,6 +571,7 @@ namespace BatallaNaval
             this.pictureBox89.Size = new System.Drawing.Size(46, 48);
             this.pictureBox89.TabIndex = 109;
             this.pictureBox89.TabStop = false;
+            this.pictureBox89.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox88
             // 
@@ -572,6 +583,7 @@ namespace BatallaNaval
             this.pictureBox88.Size = new System.Drawing.Size(46, 48);
             this.pictureBox88.TabIndex = 108;
             this.pictureBox88.TabStop = false;
+            this.pictureBox88.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox87
             // 
@@ -583,6 +595,7 @@ namespace BatallaNaval
             this.pictureBox87.Size = new System.Drawing.Size(46, 48);
             this.pictureBox87.TabIndex = 107;
             this.pictureBox87.TabStop = false;
+            this.pictureBox87.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox86
             // 
@@ -594,6 +607,7 @@ namespace BatallaNaval
             this.pictureBox86.Size = new System.Drawing.Size(46, 48);
             this.pictureBox86.TabIndex = 106;
             this.pictureBox86.TabStop = false;
+            this.pictureBox86.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox85
             // 
@@ -605,6 +619,7 @@ namespace BatallaNaval
             this.pictureBox85.Size = new System.Drawing.Size(46, 48);
             this.pictureBox85.TabIndex = 105;
             this.pictureBox85.TabStop = false;
+            this.pictureBox85.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox84
             // 
@@ -616,6 +631,7 @@ namespace BatallaNaval
             this.pictureBox84.Size = new System.Drawing.Size(46, 48);
             this.pictureBox84.TabIndex = 104;
             this.pictureBox84.TabStop = false;
+            this.pictureBox84.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox83
             // 
@@ -627,6 +643,7 @@ namespace BatallaNaval
             this.pictureBox83.Size = new System.Drawing.Size(46, 48);
             this.pictureBox83.TabIndex = 103;
             this.pictureBox83.TabStop = false;
+            this.pictureBox83.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox82
             // 
@@ -638,6 +655,7 @@ namespace BatallaNaval
             this.pictureBox82.Size = new System.Drawing.Size(46, 48);
             this.pictureBox82.TabIndex = 102;
             this.pictureBox82.TabStop = false;
+            this.pictureBox82.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox81
             // 
@@ -649,6 +667,7 @@ namespace BatallaNaval
             this.pictureBox81.Size = new System.Drawing.Size(46, 48);
             this.pictureBox81.TabIndex = 101;
             this.pictureBox81.TabStop = false;
+            this.pictureBox81.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox80
             // 
@@ -660,6 +679,7 @@ namespace BatallaNaval
             this.pictureBox80.Size = new System.Drawing.Size(48, 48);
             this.pictureBox80.TabIndex = 100;
             this.pictureBox80.TabStop = false;
+            this.pictureBox80.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox79
             // 
@@ -671,6 +691,7 @@ namespace BatallaNaval
             this.pictureBox79.Size = new System.Drawing.Size(46, 48);
             this.pictureBox79.TabIndex = 99;
             this.pictureBox79.TabStop = false;
+            this.pictureBox79.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox78
             // 
@@ -682,6 +703,7 @@ namespace BatallaNaval
             this.pictureBox78.Size = new System.Drawing.Size(46, 48);
             this.pictureBox78.TabIndex = 98;
             this.pictureBox78.TabStop = false;
+            this.pictureBox78.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox77
             // 
@@ -693,6 +715,7 @@ namespace BatallaNaval
             this.pictureBox77.Size = new System.Drawing.Size(46, 48);
             this.pictureBox77.TabIndex = 97;
             this.pictureBox77.TabStop = false;
+            this.pictureBox77.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox76
             // 
@@ -704,6 +727,7 @@ namespace BatallaNaval
             this.pictureBox76.Size = new System.Drawing.Size(46, 48);
             this.pictureBox76.TabIndex = 96;
             this.pictureBox76.TabStop = false;
+            this.pictureBox76.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox75
             // 
@@ -715,6 +739,7 @@ namespace BatallaNaval
             this.pictureBox75.Size = new System.Drawing.Size(46, 48);
             this.pictureBox75.TabIndex = 95;
             this.pictureBox75.TabStop = false;
+            this.pictureBox75.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox74
             // 
@@ -726,6 +751,7 @@ namespace BatallaNaval
             this.pictureBox74.Size = new System.Drawing.Size(46, 48);
             this.pictureBox74.TabIndex = 94;
             this.pictureBox74.TabStop = false;
+            this.pictureBox74.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox73
             // 
@@ -737,6 +763,7 @@ namespace BatallaNaval
             this.pictureBox73.Size = new System.Drawing.Size(46, 48);
             this.pictureBox73.TabIndex = 93;
             this.pictureBox73.TabStop = false;
+            this.pictureBox73.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox72
             // 
@@ -748,6 +775,7 @@ namespace BatallaNaval
             this.pictureBox72.Size = new System.Drawing.Size(46, 48);
             this.pictureBox72.TabIndex = 92;
             this.pictureBox72.TabStop = false;
+            this.pictureBox72.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox71
             // 
@@ -759,6 +787,7 @@ namespace BatallaNaval
             this.pictureBox71.Size = new System.Drawing.Size(46, 48);
             this.pictureBox71.TabIndex = 91;
             this.pictureBox71.TabStop = false;
+            this.pictureBox71.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox70
             // 
@@ -770,6 +799,7 @@ namespace BatallaNaval
             this.pictureBox70.Size = new System.Drawing.Size(48, 48);
             this.pictureBox70.TabIndex = 90;
             this.pictureBox70.TabStop = false;
+            this.pictureBox70.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox69
             // 
@@ -781,6 +811,7 @@ namespace BatallaNaval
             this.pictureBox69.Size = new System.Drawing.Size(46, 48);
             this.pictureBox69.TabIndex = 89;
             this.pictureBox69.TabStop = false;
+            this.pictureBox69.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox68
             // 
@@ -792,6 +823,7 @@ namespace BatallaNaval
             this.pictureBox68.Size = new System.Drawing.Size(46, 48);
             this.pictureBox68.TabIndex = 88;
             this.pictureBox68.TabStop = false;
+            this.pictureBox68.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox67
             // 
@@ -803,6 +835,7 @@ namespace BatallaNaval
             this.pictureBox67.Size = new System.Drawing.Size(46, 48);
             this.pictureBox67.TabIndex = 87;
             this.pictureBox67.TabStop = false;
+            this.pictureBox67.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox66
             // 
@@ -814,6 +847,7 @@ namespace BatallaNaval
             this.pictureBox66.Size = new System.Drawing.Size(46, 48);
             this.pictureBox66.TabIndex = 86;
             this.pictureBox66.TabStop = false;
+            this.pictureBox66.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox65
             // 
@@ -825,6 +859,7 @@ namespace BatallaNaval
             this.pictureBox65.Size = new System.Drawing.Size(46, 48);
             this.pictureBox65.TabIndex = 85;
             this.pictureBox65.TabStop = false;
+            this.pictureBox65.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox64
             // 
@@ -836,6 +871,7 @@ namespace BatallaNaval
             this.pictureBox64.Size = new System.Drawing.Size(46, 48);
             this.pictureBox64.TabIndex = 84;
             this.pictureBox64.TabStop = false;
+            this.pictureBox64.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox63
             // 
@@ -847,6 +883,7 @@ namespace BatallaNaval
             this.pictureBox63.Size = new System.Drawing.Size(46, 48);
             this.pictureBox63.TabIndex = 83;
             this.pictureBox63.TabStop = false;
+            this.pictureBox63.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox62
             // 
@@ -858,6 +895,7 @@ namespace BatallaNaval
             this.pictureBox62.Size = new System.Drawing.Size(46, 48);
             this.pictureBox62.TabIndex = 82;
             this.pictureBox62.TabStop = false;
+            this.pictureBox62.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox61
             // 
@@ -869,6 +907,7 @@ namespace BatallaNaval
             this.pictureBox61.Size = new System.Drawing.Size(46, 48);
             this.pictureBox61.TabIndex = 81;
             this.pictureBox61.TabStop = false;
+            this.pictureBox61.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox60
             // 
@@ -880,6 +919,7 @@ namespace BatallaNaval
             this.pictureBox60.Size = new System.Drawing.Size(48, 48);
             this.pictureBox60.TabIndex = 80;
             this.pictureBox60.TabStop = false;
+            this.pictureBox60.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox59
             // 
@@ -891,6 +931,7 @@ namespace BatallaNaval
             this.pictureBox59.Size = new System.Drawing.Size(46, 48);
             this.pictureBox59.TabIndex = 79;
             this.pictureBox59.TabStop = false;
+            this.pictureBox59.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox58
             // 
@@ -902,6 +943,7 @@ namespace BatallaNaval
             this.pictureBox58.Size = new System.Drawing.Size(46, 48);
             this.pictureBox58.TabIndex = 78;
             this.pictureBox58.TabStop = false;
+            this.pictureBox58.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox57
             // 
@@ -913,6 +955,7 @@ namespace BatallaNaval
             this.pictureBox57.Size = new System.Drawing.Size(46, 48);
             this.pictureBox57.TabIndex = 77;
             this.pictureBox57.TabStop = false;
+            this.pictureBox57.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox56
             // 
@@ -924,6 +967,7 @@ namespace BatallaNaval
             this.pictureBox56.Size = new System.Drawing.Size(46, 48);
             this.pictureBox56.TabIndex = 76;
             this.pictureBox56.TabStop = false;
+            this.pictureBox56.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox55
             // 
@@ -935,6 +979,7 @@ namespace BatallaNaval
             this.pictureBox55.Size = new System.Drawing.Size(46, 48);
             this.pictureBox55.TabIndex = 75;
             this.pictureBox55.TabStop = false;
+            this.pictureBox55.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox54
             // 
@@ -946,6 +991,7 @@ namespace BatallaNaval
             this.pictureBox54.Size = new System.Drawing.Size(46, 48);
             this.pictureBox54.TabIndex = 74;
             this.pictureBox54.TabStop = false;
+            this.pictureBox54.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox53
             // 
@@ -957,6 +1003,7 @@ namespace BatallaNaval
             this.pictureBox53.Size = new System.Drawing.Size(46, 48);
             this.pictureBox53.TabIndex = 73;
             this.pictureBox53.TabStop = false;
+            this.pictureBox53.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox52
             // 
@@ -968,6 +1015,7 @@ namespace BatallaNaval
             this.pictureBox52.Size = new System.Drawing.Size(46, 48);
             this.pictureBox52.TabIndex = 72;
             this.pictureBox52.TabStop = false;
+            this.pictureBox52.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox51
             // 
@@ -979,6 +1027,7 @@ namespace BatallaNaval
             this.pictureBox51.Size = new System.Drawing.Size(46, 48);
             this.pictureBox51.TabIndex = 71;
             this.pictureBox51.TabStop = false;
+            this.pictureBox51.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox50
             // 
@@ -990,6 +1039,7 @@ namespace BatallaNaval
             this.pictureBox50.Size = new System.Drawing.Size(48, 48);
             this.pictureBox50.TabIndex = 70;
             this.pictureBox50.TabStop = false;
+            this.pictureBox50.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox49
             // 
@@ -1001,6 +1051,7 @@ namespace BatallaNaval
             this.pictureBox49.Size = new System.Drawing.Size(46, 48);
             this.pictureBox49.TabIndex = 69;
             this.pictureBox49.TabStop = false;
+            this.pictureBox49.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox48
             // 
@@ -1012,6 +1063,7 @@ namespace BatallaNaval
             this.pictureBox48.Size = new System.Drawing.Size(46, 48);
             this.pictureBox48.TabIndex = 68;
             this.pictureBox48.TabStop = false;
+            this.pictureBox48.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox47
             // 
@@ -1023,6 +1075,7 @@ namespace BatallaNaval
             this.pictureBox47.Size = new System.Drawing.Size(46, 48);
             this.pictureBox47.TabIndex = 67;
             this.pictureBox47.TabStop = false;
+            this.pictureBox47.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox46
             // 
@@ -1034,6 +1087,7 @@ namespace BatallaNaval
             this.pictureBox46.Size = new System.Drawing.Size(46, 48);
             this.pictureBox46.TabIndex = 66;
             this.pictureBox46.TabStop = false;
+            this.pictureBox46.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox45
             // 
@@ -1045,6 +1099,7 @@ namespace BatallaNaval
             this.pictureBox45.Size = new System.Drawing.Size(46, 48);
             this.pictureBox45.TabIndex = 65;
             this.pictureBox45.TabStop = false;
+            this.pictureBox45.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox44
             // 
@@ -1056,6 +1111,7 @@ namespace BatallaNaval
             this.pictureBox44.Size = new System.Drawing.Size(46, 48);
             this.pictureBox44.TabIndex = 64;
             this.pictureBox44.TabStop = false;
+            this.pictureBox44.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox43
             // 
@@ -1067,6 +1123,7 @@ namespace BatallaNaval
             this.pictureBox43.Size = new System.Drawing.Size(46, 48);
             this.pictureBox43.TabIndex = 63;
             this.pictureBox43.TabStop = false;
+            this.pictureBox43.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox42
             // 
@@ -1078,6 +1135,7 @@ namespace BatallaNaval
             this.pictureBox42.Size = new System.Drawing.Size(46, 48);
             this.pictureBox42.TabIndex = 62;
             this.pictureBox42.TabStop = false;
+            this.pictureBox42.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox41
             // 
@@ -1089,6 +1147,7 @@ namespace BatallaNaval
             this.pictureBox41.Size = new System.Drawing.Size(46, 48);
             this.pictureBox41.TabIndex = 61;
             this.pictureBox41.TabStop = false;
+            this.pictureBox41.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox40
             // 
@@ -1100,6 +1159,7 @@ namespace BatallaNaval
             this.pictureBox40.Size = new System.Drawing.Size(48, 48);
             this.pictureBox40.TabIndex = 60;
             this.pictureBox40.TabStop = false;
+            this.pictureBox40.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox39
             // 
@@ -1111,6 +1171,7 @@ namespace BatallaNaval
             this.pictureBox39.Size = new System.Drawing.Size(46, 48);
             this.pictureBox39.TabIndex = 59;
             this.pictureBox39.TabStop = false;
+            this.pictureBox39.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox38
             // 
@@ -1122,6 +1183,7 @@ namespace BatallaNaval
             this.pictureBox38.Size = new System.Drawing.Size(46, 48);
             this.pictureBox38.TabIndex = 58;
             this.pictureBox38.TabStop = false;
+            this.pictureBox38.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox37
             // 
@@ -1133,6 +1195,7 @@ namespace BatallaNaval
             this.pictureBox37.Size = new System.Drawing.Size(46, 48);
             this.pictureBox37.TabIndex = 57;
             this.pictureBox37.TabStop = false;
+            this.pictureBox37.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox36
             // 
@@ -1144,6 +1207,7 @@ namespace BatallaNaval
             this.pictureBox36.Size = new System.Drawing.Size(46, 48);
             this.pictureBox36.TabIndex = 56;
             this.pictureBox36.TabStop = false;
+            this.pictureBox36.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox35
             // 
@@ -1155,6 +1219,7 @@ namespace BatallaNaval
             this.pictureBox35.Size = new System.Drawing.Size(46, 48);
             this.pictureBox35.TabIndex = 55;
             this.pictureBox35.TabStop = false;
+            this.pictureBox35.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox34
             // 
@@ -1166,6 +1231,7 @@ namespace BatallaNaval
             this.pictureBox34.Size = new System.Drawing.Size(46, 48);
             this.pictureBox34.TabIndex = 54;
             this.pictureBox34.TabStop = false;
+            this.pictureBox34.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox33
             // 
@@ -1177,6 +1243,7 @@ namespace BatallaNaval
             this.pictureBox33.Size = new System.Drawing.Size(46, 48);
             this.pictureBox33.TabIndex = 53;
             this.pictureBox33.TabStop = false;
+            this.pictureBox33.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox32
             // 
@@ -1188,6 +1255,7 @@ namespace BatallaNaval
             this.pictureBox32.Size = new System.Drawing.Size(46, 48);
             this.pictureBox32.TabIndex = 52;
             this.pictureBox32.TabStop = false;
+            this.pictureBox32.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox31
             // 
@@ -1199,6 +1267,7 @@ namespace BatallaNaval
             this.pictureBox31.Size = new System.Drawing.Size(46, 48);
             this.pictureBox31.TabIndex = 51;
             this.pictureBox31.TabStop = false;
+            this.pictureBox31.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox30
             // 
@@ -1210,6 +1279,7 @@ namespace BatallaNaval
             this.pictureBox30.Size = new System.Drawing.Size(48, 45);
             this.pictureBox30.TabIndex = 50;
             this.pictureBox30.TabStop = false;
+            this.pictureBox30.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox29
             // 
@@ -1221,6 +1291,7 @@ namespace BatallaNaval
             this.pictureBox29.Size = new System.Drawing.Size(46, 45);
             this.pictureBox29.TabIndex = 49;
             this.pictureBox29.TabStop = false;
+            this.pictureBox29.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox28
             // 
@@ -1232,6 +1303,7 @@ namespace BatallaNaval
             this.pictureBox28.Size = new System.Drawing.Size(46, 45);
             this.pictureBox28.TabIndex = 48;
             this.pictureBox28.TabStop = false;
+            this.pictureBox28.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox27
             // 
@@ -1243,6 +1315,7 @@ namespace BatallaNaval
             this.pictureBox27.Size = new System.Drawing.Size(46, 45);
             this.pictureBox27.TabIndex = 47;
             this.pictureBox27.TabStop = false;
+            this.pictureBox27.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox26
             // 
@@ -1254,6 +1327,7 @@ namespace BatallaNaval
             this.pictureBox26.Size = new System.Drawing.Size(46, 45);
             this.pictureBox26.TabIndex = 46;
             this.pictureBox26.TabStop = false;
+            this.pictureBox26.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox25
             // 
@@ -1265,6 +1339,7 @@ namespace BatallaNaval
             this.pictureBox25.Size = new System.Drawing.Size(46, 45);
             this.pictureBox25.TabIndex = 45;
             this.pictureBox25.TabStop = false;
+            this.pictureBox25.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox24
             // 
@@ -1276,6 +1351,7 @@ namespace BatallaNaval
             this.pictureBox24.Size = new System.Drawing.Size(46, 45);
             this.pictureBox24.TabIndex = 44;
             this.pictureBox24.TabStop = false;
+            this.pictureBox24.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox23
             // 
@@ -1287,6 +1363,7 @@ namespace BatallaNaval
             this.pictureBox23.Size = new System.Drawing.Size(46, 45);
             this.pictureBox23.TabIndex = 43;
             this.pictureBox23.TabStop = false;
+            this.pictureBox23.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox22
             // 
@@ -1298,6 +1375,7 @@ namespace BatallaNaval
             this.pictureBox22.Size = new System.Drawing.Size(46, 45);
             this.pictureBox22.TabIndex = 42;
             this.pictureBox22.TabStop = false;
+            this.pictureBox22.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox21
             // 
@@ -1309,6 +1387,7 @@ namespace BatallaNaval
             this.pictureBox21.Size = new System.Drawing.Size(46, 45);
             this.pictureBox21.TabIndex = 41;
             this.pictureBox21.TabStop = false;
+            this.pictureBox21.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox20
             // 
@@ -1320,6 +1399,7 @@ namespace BatallaNaval
             this.pictureBox20.Size = new System.Drawing.Size(48, 49);
             this.pictureBox20.TabIndex = 40;
             this.pictureBox20.TabStop = false;
+            this.pictureBox20.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox19
             // 
@@ -1331,6 +1411,7 @@ namespace BatallaNaval
             this.pictureBox19.Size = new System.Drawing.Size(46, 49);
             this.pictureBox19.TabIndex = 39;
             this.pictureBox19.TabStop = false;
+            this.pictureBox19.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox18
             // 
@@ -1342,6 +1423,7 @@ namespace BatallaNaval
             this.pictureBox18.Size = new System.Drawing.Size(46, 49);
             this.pictureBox18.TabIndex = 38;
             this.pictureBox18.TabStop = false;
+            this.pictureBox18.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox17
             // 
@@ -1353,6 +1435,7 @@ namespace BatallaNaval
             this.pictureBox17.Size = new System.Drawing.Size(46, 49);
             this.pictureBox17.TabIndex = 37;
             this.pictureBox17.TabStop = false;
+            this.pictureBox17.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox16
             // 
@@ -1364,6 +1447,7 @@ namespace BatallaNaval
             this.pictureBox16.Size = new System.Drawing.Size(46, 49);
             this.pictureBox16.TabIndex = 36;
             this.pictureBox16.TabStop = false;
+            this.pictureBox16.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox15
             // 
@@ -1375,6 +1459,7 @@ namespace BatallaNaval
             this.pictureBox15.Size = new System.Drawing.Size(46, 49);
             this.pictureBox15.TabIndex = 35;
             this.pictureBox15.TabStop = false;
+            this.pictureBox15.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox14
             // 
@@ -1386,6 +1471,7 @@ namespace BatallaNaval
             this.pictureBox14.Size = new System.Drawing.Size(46, 49);
             this.pictureBox14.TabIndex = 34;
             this.pictureBox14.TabStop = false;
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox13
             // 
@@ -1397,6 +1483,7 @@ namespace BatallaNaval
             this.pictureBox13.Size = new System.Drawing.Size(46, 49);
             this.pictureBox13.TabIndex = 33;
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox12
             // 
@@ -1408,6 +1495,7 @@ namespace BatallaNaval
             this.pictureBox12.Size = new System.Drawing.Size(46, 49);
             this.pictureBox12.TabIndex = 32;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox11
             // 
@@ -1419,6 +1507,7 @@ namespace BatallaNaval
             this.pictureBox11.Size = new System.Drawing.Size(46, 49);
             this.pictureBox11.TabIndex = 31;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox10
             // 
@@ -1430,6 +1519,7 @@ namespace BatallaNaval
             this.pictureBox10.Size = new System.Drawing.Size(48, 48);
             this.pictureBox10.TabIndex = 30;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox9
             // 
@@ -1441,6 +1531,7 @@ namespace BatallaNaval
             this.pictureBox9.Size = new System.Drawing.Size(46, 48);
             this.pictureBox9.TabIndex = 29;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox8
             // 
@@ -1452,6 +1543,7 @@ namespace BatallaNaval
             this.pictureBox8.Size = new System.Drawing.Size(46, 48);
             this.pictureBox8.TabIndex = 28;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox7
             // 
@@ -1463,6 +1555,7 @@ namespace BatallaNaval
             this.pictureBox7.Size = new System.Drawing.Size(46, 48);
             this.pictureBox7.TabIndex = 27;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox6
             // 
@@ -1474,6 +1567,7 @@ namespace BatallaNaval
             this.pictureBox6.Size = new System.Drawing.Size(46, 48);
             this.pictureBox6.TabIndex = 26;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox5
             // 
@@ -1485,6 +1579,7 @@ namespace BatallaNaval
             this.pictureBox5.Size = new System.Drawing.Size(46, 48);
             this.pictureBox5.TabIndex = 25;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox4
             // 
@@ -1496,6 +1591,7 @@ namespace BatallaNaval
             this.pictureBox4.Size = new System.Drawing.Size(46, 48);
             this.pictureBox4.TabIndex = 24;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox3
             // 
@@ -1507,6 +1603,7 @@ namespace BatallaNaval
             this.pictureBox3.Size = new System.Drawing.Size(46, 48);
             this.pictureBox3.TabIndex = 23;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -1518,6 +1615,7 @@ namespace BatallaNaval
             this.pictureBox2.Size = new System.Drawing.Size(46, 48);
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label12
             // 
@@ -1759,6 +1857,7 @@ namespace BatallaNaval
             this.pictureBox1.Size = new System.Drawing.Size(46, 48);
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // comboBox1
             // 

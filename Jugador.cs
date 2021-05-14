@@ -7,18 +7,17 @@ namespace BatallaNaval
 {
     public class Jugador
     {
-        private int numero_disparos;
+        private int numeroDisparos;
 
-        public Jugador(int numero_disparos)
+        public Jugador()
         {
-            this.numero_disparos = 10;
+            this.numeroDisparos= 10;
         }
 
-        public int getNumero_disparos()
+        public int NumeroDisparos
         {
-            return numero_disparos;
-        }
-
-        //public 
+            get { return numeroDisparos;  }
+            set { numeroDisparos = value; }
+        } 
     }
 }

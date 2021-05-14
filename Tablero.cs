@@ -21,7 +21,7 @@ namespace BatallaNaval
                 columnas.Add(-1);
                 filas.Add(columnas);
             }
-            ComprobarCasilla("2,3");
+            //ComprobarCasilla("2,3");
             
         }
 
