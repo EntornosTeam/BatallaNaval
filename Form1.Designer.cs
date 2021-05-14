@@ -31,7 +31,7 @@ namespace BatallaNaval
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_comenzar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox100 = new System.Windows.Forms.PictureBox();
             this.pictureBox99 = new System.Windows.Forms.PictureBox();
@@ -154,7 +154,7 @@ namespace BatallaNaval
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_posicion = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox100)).BeginInit();
@@ -267,14 +267,14 @@ namespace BatallaNaval
             this.listBox1.Size = new System.Drawing.Size(256, 355);
             this.listBox1.TabIndex = 1;
             // 
-            // button1
+            // btn_comenzar
             // 
-            this.button1.Location = new System.Drawing.Point(356, 576);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(481, 46);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Comenzar Juego";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_comenzar.Location = new System.Drawing.Point(356, 576);
+            this.btn_comenzar.Name = "btn_comenzar";
+            this.btn_comenzar.Size = new System.Drawing.Size(481, 46);
+            this.btn_comenzar.TabIndex = 2;
+            this.btn_comenzar.Text = "Comenzar Juego";
+            this.btn_comenzar.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
             // 
@@ -1859,16 +1859,16 @@ namespace BatallaNaval
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // comboBox1
+            // cb_posicion
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cb_posicion.FormattingEnabled = true;
+            this.cb_posicion.Items.AddRange(new object[] {
             "Horizontal",
             "Vertical"});
-            this.comboBox1.Location = new System.Drawing.Point(21, 489);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(256, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cb_posicion.Location = new System.Drawing.Point(21, 489);
+            this.cb_posicion.Name = "cb_posicion";
+            this.cb_posicion.Size = new System.Drawing.Size(256, 21);
+            this.cb_posicion.TabIndex = 4;
             // 
             // label22
             // 
@@ -1885,9 +1885,9 @@ namespace BatallaNaval
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 683);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cb_posicion);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_comenzar);
             this.Controls.Add(this.listBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -2001,7 +2001,7 @@ namespace BatallaNaval
 
         #endregion
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_comenzar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -2124,7 +2124,7 @@ namespace BatallaNaval
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_posicion;
         private System.Windows.Forms.Label label22;
     }
 }
