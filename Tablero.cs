@@ -23,12 +23,23 @@ namespace BatallaNaval
                 }
                 filas.Add(columnas);
             }
-            //ComprobarCasilla("2,3");
+            ComprobarCasilla("2,3");
             
         }
 
+        /*///////////////////////////////////////////////////////////////////////////////
+        / Notas: los valores de las casillas funcionan de la siguiente manera:          /
+        /           En el índice 0: ->  0 a 9 idBarco                                   /
+        /                           -> -1 agua                                          /
+        /           En el índice 1: el estado de la casilla -> -1 no tocado             /
+        /                                                       0 disparo a agua        /
+        /                                                       1 tocado                /
+        /                                                       2 tocado y hundido      /
+        *////////////////////////////////////////////////////////////////////////////////
+
+
         /// <summary>
-        /// 
+        /// Comprueba una casilla mediante un string ej."2,5"
         /// </summary>
         /// <param name="casillaTocada"></param>
         /// <returns>Devuelve el valor de la casilla solicitada. Indice 0 = id del barco, o -1 si es agua. Indice 1 = estado de la casilla</returns>
@@ -39,16 +50,30 @@ namespace BatallaNaval
         }
 
 
-        public void RecorrerTablero()
+        /// <summary>
+        /// Cambia el valor de una casilla mediante un string ej."2,5" y su nuevo valor int[]
+        /// </summary>
+        /// <param name="casillaTocada"></param>
+        /// <returns>Devuelve el valor de la casilla solicitada. Indice 0 = id del barco, o -1 si es agua. Indice 1 = estado de la casilla</returns>
+        public void CambiarValorCasilla(String casilla, int[] nuevoValor) // "2,5" -> tag
         {
-            int valor = ComprobarCasilla("2, 5");
-            foreach (List<int> fila in filas)
-            {
-                foreach (int casilla in fila)
-                {
-                    // fila.IndexOf(casilla);
-                }
-            }
+            int[] cas = Array.ConvertAll(casilla.Split(','), s => Int32.Parse(s));
+            filas[cas[0]][cas[1]] = nuevoValor;
+            return;
         }
+
+        //public void RecorrerTablero()
+        //{
+        //    int[] valor = ComprobarCasilla("2, 5");
+        //    foreach (List<int[]> fila in filas)
+        //    {
+        //        foreach (int[] casilla in fila)
+        //        {
+        //            if ()
+        //            // fila.IndexOf(casilla);
+
+        //        }
+        //    }
+        //}
     }
 }
