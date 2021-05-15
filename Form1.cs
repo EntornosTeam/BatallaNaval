@@ -14,6 +14,7 @@ namespace BatallaNaval
     {
         Tablero tablero;
         List<Barco> barcos;
+  
         public Form1()
         {
             InitializeComponent();
@@ -63,12 +64,13 @@ namespace BatallaNaval
         {
             PictureBox pb = sender as PictureBox;
 
-            int num_casillas = 4;
+            int num_casillas = int.Parse(listView1.SelectedItems[0].SubItems[1].Text.ToString());//4; //Número de casillas que ocupa el Barco.
+
             int fila = int.Parse(pb.Tag.ToString().Split(',')[0]);
 
             int columna = int.Parse(pb.Tag.ToString().Split(',')[1]);
 
-            MessageBox.Show("Fila " + fila + " Columna " + columna);
+            //MessageBox.Show("Fila " + fila + " Columna " + columna);
 
             if(cb_posicion.SelectedIndex == 0) //Indice 0 = a Horizontal, Indice 1 = Vertical.
             {
@@ -86,6 +88,7 @@ namespace BatallaNaval
                     PictureBox pbPintar = ObtenerPictureBox(tag);
                     pbPintar.BackColor = Color.Red;
                     Barco barco = new Barco(num_casillas);
+                    barcos.Add(barco);
                     tablero.CambiarValorCasilla(tag, new int[] { barco.Id, -1 });
                 }
             } else
