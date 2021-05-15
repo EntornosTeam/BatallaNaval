@@ -64,7 +64,6 @@ namespace BatallaNaval
             PictureBox pb = sender as PictureBox;
 
             int num_casillas = 4;
-
             int fila = int.Parse(pb.Tag.ToString().Split(',')[0]);
 
             int columna = int.Parse(pb.Tag.ToString().Split(',')[1]);
@@ -86,8 +85,8 @@ namespace BatallaNaval
                     string tag = filaActual.ToString() + "," + columnaActual.ToString();
                     PictureBox pbPintar = ObtenerPictureBox(tag);
                     pbPintar.BackColor = Color.Red;
-                    Barco barco = new Barco(size);
-                    tablero.CambiarValorCasilla(tag, new int[] { barco.id, -1 });
+                    Barco barco = new Barco(num_casillas);
+                    tablero.CambiarValorCasilla(tag, new int[] { barco.Id, -1 });
                 }
             } else
             {
