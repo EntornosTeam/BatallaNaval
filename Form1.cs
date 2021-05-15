@@ -104,6 +104,22 @@ namespace BatallaNaval
                     int columnaActual = columna + (x * y);
                     string tag = filaActual.ToString() + "," + columnaActual.ToString();
                     PictureBox pbPintar = ObtenerPictureBox(tag);
+                    if (numCasillas == 1)
+                    {
+                        // imagenFragata
+                    }
+                    else if (x == 0)
+                    {
+                        // imagenDelante
+                    }
+                    else if (x + 1 == numCasillas)
+                    {
+                        // imagenFin
+                    }
+                    else if (x > 1)
+                    {
+                        // imagenMedio
+                    }
                     pbPintar.BackColor = Color.Red;
                     tablero.CambiarValorCasilla(tag, new int[] { id, -1 });
                 }
