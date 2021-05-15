@@ -62,6 +62,14 @@ namespace BatallaNaval
             return;
         }
 
+        public void CambiarEstado(String casilla, int estado)
+        {
+            int[] cas = Array.ConvertAll(casilla.Split(','), s => Int32.Parse(s));
+            int[] casRef = filas[cas[0]][cas[1]];
+            casRef[1] = estado;
+            return;
+        }
+
         //public void RecorrerTablero()
         //{
         //    int[] valor = ComprobarCasilla("2, 5");
