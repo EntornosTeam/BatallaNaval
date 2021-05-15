@@ -13,25 +13,14 @@ namespace BatallaNaval
     public partial class Form1 : Form
     {
         Tablero tablero;
-        List<int[]> barcos;
+        List<Barco> barcos;
         public Form1()
         {
             InitializeComponent();
             AssignTag();
             CreateTablero();
             cb_posicion.SelectedIndex = 0;
-            barcos = new List<int[]>() { // índice 0 = idBarco, índice 1 = lengthBarco
-                 new int[] {0,1},
-                 new int[] {1,1},
-                 new int[] {2,1},
-                 new int[] {3,1},
-                 new int[] {4,2},
-                 new int[] {5,2},
-                 new int[] {6,2},
-                 new int[] {7,3},
-                 new int[] {8,3},
-                 new int[] {9,4}
-            };
+            barcos = new List<Barco>();
         }
 
         private void AssignTag()
@@ -92,9 +81,13 @@ namespace BatallaNaval
                 }
                 for (int x = 0; x < num_casillas; x++)
                 {
-                    
-                    PictureBox pbPintar = ObtenerPictureBox(fila.ToString()+","+(columna+(x*y)).ToString());
+                    int filaActual = fila;
+                    int columnaActual = columna + (x * y);
+                    string tag = filaActual.ToString() + "," + columnaActual.ToString();
+                    PictureBox pbPintar = ObtenerPictureBox(tag);
                     pbPintar.BackColor = Color.Red;
+                    Barco barco = new Barco(size);
+                    tablero.CambiarValorCasilla(tag, new int[] { barco.id, -1 });
                 }
             } else
             {
