@@ -93,8 +93,6 @@ namespace BatallaNaval
                         MessageBox.Show("Ya hay un barco en esa casilla");
                         return;
                     }
-                    PictureBox pbPintar = ObtenerPictureBox(tag);
-                    pbPintar.BackColor = Color.Red;
                     tablero.CambiarValorCasilla(tag, new int[] {id, -1 });
                 }
 
