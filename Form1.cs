@@ -126,5 +126,10 @@ namespace BatallaNaval
             MessageBox.Show("No pilla coordenada");
             return null;
         }
+        private void listView1_ColumnWidthChanging_1(object sender, ColumnWidthChangingEventArgs e)
+        {
+            e.NewWidth = this.listView1.Columns[e.ColumnIndex].Width;
+            e.Cancel = true;
+        }
     }
 }
