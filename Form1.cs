@@ -80,18 +80,26 @@ namespace BatallaNaval
                     y = -1;
                     // MessageBox.Show("No se puede poner el barco");
                 }
-                Barco barco = CrearBarco(numCasillas);
-                if (barco == null) return;
+                int id = Barco.lastId + 1;
+                if (!ComprobarBarco(numCasillas)) return;
+                
                 for (int x = 0; x < numCasillas; x++)
                 {
                     int filaActual = fila;
                     int columnaActual = columna + (x * y);
                     string tag = filaActual.ToString() + "," + columnaActual.ToString();
+                    if (tablero.ComprobarCasilla(tag)[0] != -1)
+                    {
+                        MessageBox.Show("Ya hay un barco en esa casilla");
+                        return;
+                    }
                     PictureBox pbPintar = ObtenerPictureBox(tag);
                     pbPintar.BackColor = Color.Red;
-                    tablero.CambiarValorCasilla(tag, new int[] { barco.Id, -1 });
+                    tablero.CambiarValorCasilla(tag, new int[] {id, -1 });
                 }
-
+                
+                Barco barco = new Barco(numCasillas);
+                barcos.Add(barco);
             } 
             else
             {
@@ -99,16 +107,21 @@ namespace BatallaNaval
                 if ((fila - 1) + numCasillas > 9) {
                     x = -1;
                 }
-                Barco barco = CrearBarco(numCasillas);
-                if (barco == null) return;
+                int id = Barco.lastId + 1;
+                if (!ComprobarBarco(numCasillas)) return;
                 for (int y = 0; y < numCasillas; y++)
                 {
                     int filaActual = fila+(x * y);
                     int columnaActual = columna;
                     string tag = filaActual.ToString() + "," + columnaActual.ToString();
+                    if (tablero.ComprobarCasilla(tag)[0] != -1)
+                    {
+                        MessageBox.Show("Ya hay un barco en esa casilla");
+                        return;
+                    }
                     PictureBox pbPintar = ObtenerPictureBox(tag);
                     pbPintar.BackColor = Color.Red;
-                    tablero.CambiarValorCasilla(tag, new int[] { barco.Id, -1 });
+                    tablero.CambiarValorCasilla(tag, new int[] {id, -1 });
                 }
 
             }
@@ -134,12 +147,12 @@ namespace BatallaNaval
             e.Cancel = true;
         }
 
-        private Barco CrearBarco(int size)
+        private bool ComprobarBarco(int size)
         {
             if (Barco.lastId + 1 > Barco.MAXID)
             {
                 MessageBox.Show("Se ha excedido el número máximo de barcos");
-                return null;
+                return false;
             }
             else 
             {
@@ -149,14 +162,14 @@ namespace BatallaNaval
                         if (Barco.numFragatas + 1 > Barco.MAXFRAGATAS)
                         {
                             MessageBox.Show("Se ha excedido el número máximo de fragatas.");
-                            return null;
+                            return false;
                         }
                         break;
                     case 2:
                         if (Barco.numDestructores + 1 > Barco.MAXDESTRUCTORES)
                         {
                             MessageBox.Show("Se ha excedido el número máximo de destructores.");
-                            return null;
+                            return false;
                         }
 
                         break;
@@ -164,7 +177,7 @@ namespace BatallaNaval
                         if (Barco.numSubmarinos + 1 > Barco.MAXSUBMARINOS)
                         {
                             MessageBox.Show("Se ha excedido el número máximo de submarinos.");
-                            return null;
+                            return false;
                         }
 
                         break;
@@ -172,17 +185,15 @@ namespace BatallaNaval
                         if (Barco.numPortaaviones + 1 > Barco.MAXPORTAAVIONES)
                         {
                             MessageBox.Show("Se ha excedido el número máximo de portaaviones.");
-                            return null;
+                            return false;
                         }
 
                         break;
                     default:
                         MessageBox.Show("El tamaño es incorrecto.");
-                        return null;
+                        return false;
                 }
-                Barco barco = new Barco(size);
-                barcos.Add(barco);
-                return barco;
+                return true;
             }
         }
     }
