@@ -64,7 +64,7 @@ namespace BatallaNaval
         {
             PictureBox pb = sender as PictureBox;
 
-            int num_casillas = int.Parse(listView1.SelectedItems[0].SubItems[1].Text.ToString());//4; //Número de casillas que ocupa el Barco.
+            int numCasillas = int.Parse(listView1.SelectedItems[0].SubItems[1].Text.ToString());//4; //Número de casillas que ocupa el Barco.
 
             int fila = int.Parse(pb.Tag.ToString().Split(',')[0]);
 
@@ -75,33 +75,40 @@ namespace BatallaNaval
             if(cb_posicion.SelectedIndex == 0) //Indice 0 = a Horizontal, Indice 1 = Vertical.
             {
                 int y = 1; // si es 1, va a la derecha, si es -1, va a la izquierda
-                if ((columna - 1) + num_casillas > 9)
+                if ((columna - 1) + numCasillas > 9)
                 {
                     y = -1;
                     // MessageBox.Show("No se puede poner el barco");
                 }
-                for (int x = 0; x < num_casillas; x++)
+                Barco barco = CrearBarco(numCasillas);
+                if (barco == null) return;
+                for (int x = 0; x < numCasillas; x++)
                 {
                     int filaActual = fila;
                     int columnaActual = columna + (x * y);
                     string tag = filaActual.ToString() + "," + columnaActual.ToString();
                     PictureBox pbPintar = ObtenerPictureBox(tag);
                     pbPintar.BackColor = Color.Red;
-                    Barco barco = new Barco(num_casillas);
-                    barcos.Add(barco);
                     tablero.CambiarValorCasilla(tag, new int[] { barco.Id, -1 });
                 }
-            } else
+
+            } 
+            else
             {
                 int x = 1;
-                if ((fila - 1) + num_casillas > 9) {
+                if ((fila - 1) + numCasillas > 9) {
                     x = -1;
                 }
-                for (int y = 0; y < num_casillas; y++)
+                Barco barco = CrearBarco(numCasillas);
+                if (barco == null) return;
+                for (int y = 0; y < numCasillas; y++)
                 {
-
-                    PictureBox pbPintar = ObtenerPictureBox((fila+(y*x)).ToString() + "," + columna.ToString());
+                    int filaActual = fila+(x * y);
+                    int columnaActual = columna;
+                    string tag = filaActual.ToString() + "," + columnaActual.ToString();
+                    PictureBox pbPintar = ObtenerPictureBox(tag);
                     pbPintar.BackColor = Color.Red;
+                    tablero.CambiarValorCasilla(tag, new int[] { barco.Id, -1 });
                 }
 
             }
@@ -125,6 +132,58 @@ namespace BatallaNaval
         {
             e.NewWidth = this.listView1.Columns[e.ColumnIndex].Width;
             e.Cancel = true;
+        }
+
+        private Barco CrearBarco(int size)
+        {
+            if (Barco.lastId + 1 > Barco.MAXID)
+            {
+                MessageBox.Show("Se ha excedido el número máximo de barcos");
+                return null;
+            }
+            else 
+            {
+                switch (size)
+                {
+                    case 1:
+                        if (Barco.numFragatas + 1 > Barco.MAXFRAGATAS)
+                        {
+                            MessageBox.Show("Se ha excedido el número máximo de fragatas.");
+                            return null;
+                        }
+                        break;
+                    case 2:
+                        if (Barco.numDestructores + 1 > Barco.MAXDESTRUCTORES)
+                        {
+                            MessageBox.Show("Se ha excedido el número máximo de destructores.");
+                            return null;
+                        }
+
+                        break;
+                    case 3:
+                        if (Barco.numSubmarinos + 1 > Barco.MAXSUBMARINOS)
+                        {
+                            MessageBox.Show("Se ha excedido el número máximo de submarinos.");
+                            return null;
+                        }
+
+                        break;
+                    case 4:
+                        if (Barco.numPortaaviones + 1 > Barco.MAXPORTAAVIONES)
+                        {
+                            MessageBox.Show("Se ha excedido el número máximo de portaaviones.");
+                            return null;
+                        }
+
+                        break;
+                    default:
+                        MessageBox.Show("El tamaño es incorrecto.");
+                        return null;
+                }
+                Barco barco = new Barco(size);
+                barcos.Add(barco);
+                return barco;
+            }
         }
     }
 }
