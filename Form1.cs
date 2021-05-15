@@ -54,7 +54,6 @@ namespace BatallaNaval
                     {
                         columna--;
                     }
-                    listBox1.Items.Add(pb.Tag);
                 }
             }
             
@@ -97,6 +96,19 @@ namespace BatallaNaval
                     PictureBox pbPintar = ObtenerPictureBox(fila.ToString()+","+(columna+(x*y)).ToString());
                     pbPintar.BackColor = Color.Red;
                 }
+            } else
+            {
+                int x = 1;
+                if ((fila - 1) + num_casillas > 9) {
+                    x = -1;
+                }
+                for (int y = 0; y < num_casillas; y++)
+                {
+
+                    PictureBox pbPintar = ObtenerPictureBox((fila+(y*x)).ToString() + "," + columna.ToString());
+                    pbPintar.BackColor = Color.Red;
+                }
+
             }
         }
 

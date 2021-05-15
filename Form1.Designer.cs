@@ -1861,6 +1861,7 @@ namespace BatallaNaval
             // 
             // cb_posicion
             // 
+            this.cb_posicion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_posicion.FormattingEnabled = true;
             this.cb_posicion.Items.AddRange(new object[] {
             "Horizontal",
