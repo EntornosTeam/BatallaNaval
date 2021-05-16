@@ -29,18 +29,22 @@ namespace BatallaNaval
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Fragata",
-            "1"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "Fragata"),
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "1"),
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "4", System.Drawing.Color.Black, System.Drawing.SystemColors.Window, new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))))}, -1);
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Destructor",
-            "2"}, -1);
+            "2",
+            "3"}, -1);
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Submarino",
-            "3"}, -1);
+            "3",
+            "2"}, -1);
             System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "Portaaviones",
-            "4"}, -1);
+            "4",
+            "1"}, -1);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btn_comenzar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -170,6 +174,7 @@ namespace BatallaNaval
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox100)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox99)).BeginInit();
@@ -1874,7 +1879,7 @@ namespace BatallaNaval
             "Vertical"});
             this.cb_posicion.Location = new System.Drawing.Point(21, 489);
             this.cb_posicion.Name = "cb_posicion";
-            this.cb_posicion.Size = new System.Drawing.Size(256, 21);
+            this.cb_posicion.Size = new System.Drawing.Size(283, 21);
             this.cb_posicion.TabIndex = 4;
             // 
             // label22
@@ -1890,9 +1895,14 @@ namespace BatallaNaval
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader2,
+            this.columnHeader3});
             this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.HideSelection = false;
+            listViewItem1.UseItemStyleForSubItems = false;
+            listViewItem2.UseItemStyleForSubItems = false;
+            listViewItem3.UseItemStyleForSubItems = false;
+            listViewItem4.UseItemStyleForSubItems = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
             listViewItem2,
@@ -1901,7 +1911,7 @@ namespace BatallaNaval
             this.listView1.Location = new System.Drawing.Point(21, 51);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(256, 348);
+            this.listView1.Size = new System.Drawing.Size(283, 348);
             this.listView1.TabIndex = 6;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -1910,13 +1920,19 @@ namespace BatallaNaval
             // columnHeader1
             // 
             this.columnHeader1.Text = "Barco";
-            this.columnHeader1.Width = 133;
+            this.columnHeader1.Width = 106;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Tamaño";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 117;
+            this.columnHeader2.Width = 79;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Cantidad";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 93;
             // 
             // Form1
             // 
@@ -2167,6 +2183,7 @@ namespace BatallaNaval
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
 
