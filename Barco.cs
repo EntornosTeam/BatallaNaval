@@ -34,6 +34,8 @@ namespace BatallaNaval
 
         public Barco(int s)
         {
+            //Gestión de Excepciones
+
             if (lastId + 1 > MAXID) throw new Exception("Se ha excedido el número máximo de barcos");
             this.Size = s;
             switch (s)
