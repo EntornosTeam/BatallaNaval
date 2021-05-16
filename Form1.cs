@@ -70,7 +70,7 @@ namespace BatallaNaval
             {
                 PictureBox pb = sender as PictureBox;
 
-                int numCasillas = int.Parse(listView1.SelectedItems[0].SubItems[2].Text.ToString());//4; //Número de casillas que ocupa el Barco.
+                int numCasillas = int.Parse(listView1.SelectedItems[0].SubItems[1].Text.ToString());//4; //Número de casillas que ocupa el Barco.
 
                 int fila = int.Parse(pb.Tag.ToString().Split(',')[0]);
 
