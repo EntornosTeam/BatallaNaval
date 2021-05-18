@@ -109,11 +109,12 @@ namespace BatallaNaval
                                 MessageBox.Show("Ya hay un barco en esa casilla");
                                 return;
                             }
-                            tablero.CambiarValorCasilla(tag, new int[] { id, -1 });
+                            
                         }
 
                         for (int x = 0; x < numCasillas; x++) // bucle pintar
                         {
+
                             int filaActual = fila;
                             int columnaActual = columna + (x * y);
                             string tag = filaActual.ToString() + "," + columnaActual.ToString();
@@ -136,6 +137,7 @@ namespace BatallaNaval
                             }
                             pbPintar.BackColor = ObtenerColor(numCasillas);
                             tablero.CambiarValorCasilla(tag, new int[] { id, -1 });
+
                         }
                         Barco barco = new Barco(numCasillas);
                         RestarNumeroBarcos();
