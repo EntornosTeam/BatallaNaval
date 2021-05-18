@@ -76,114 +76,125 @@ namespace BatallaNaval
 
                 int columna = int.Parse(pb.Tag.ToString().Split(',')[1]);
 
-                //MessageBox.Show("Fila " + fila + " Columna " + columna);
-
-                if (cb_posicion.SelectedIndex == 0) //Indice 0 = a Horizontal, Indice 1 = Vertical.
+               if (tablero.ComprobarCasilla(fila + "," + columna)[0] != -1/* && tablero.ComprobarCasilla(fila + "," + columna)[0] == listView1.SelectedItems[0]*/)
                 {
-                    int y = 1; // si es 1, va a la derecha, si es -1, va a la izquierda
-                    if ((columna - 1) + numCasillas > 9)
-                    {
-                        y = -1;
-                        // MessageBox.Show("No se puede poner el barco");
-                    }
-                    int id = Barco.lastId + 1;
-                    if (!ComprobarBarco(numCasillas)) return;
-
-                    for (int x = 0; x < numCasillas; x++) // bucle comprobación casillas
-                    {
-                        int filaActual = fila;
-                        int columnaActual = columna + (x * y);
-                        string tag = filaActual.ToString() + "," + columnaActual.ToString();
-                        if (tablero.ComprobarCasilla(tag)[0] != -1)
-                        {
-                            MessageBox.Show("Ya hay un barco en esa casilla");
-                            return;
-                        }
-                        PictureBox pbPintar = ObtenerPictureBox(tag);
-                        pbPintar.BackColor = ObtenerColor(numCasillas);
-                        tablero.CambiarValorCasilla(tag, new int[] { id, -1 });
-                    }
-
-                    for (int x = 0; x < numCasillas; x++) // bucle pintar
-                    {
-                        int filaActual = fila;
-                        int columnaActual = columna + (x * y);
-                        string tag = filaActual.ToString() + "," + columnaActual.ToString();
-                        PictureBox pbPintar = ObtenerPictureBox(tag);
-                        if (numCasillas == 1)
-                        {
-                            // imagenFragata
-                        }
-                        else if (x == 0)
-                        {
-                            // imagenDelante
-                        }
-                        else if (x + 1 == numCasillas)
-                        {
-                            // imagenFin
-                        }
-                        else if (x > 1)
-                        {
-                            // imagenMedio
-                        }
-                        pbPintar.BackColor = ObtenerColor(numCasillas);
-                        tablero.CambiarValorCasilla(tag, new int[] { id, -1 });
-                    }
-                    Barco barco = new Barco(numCasillas);
-                    RestarNumeroBarcos();
-                    barcos.Add(barco);
+                    int idBarco = tablero.ComprobarCasilla(fila + "," + columna)[0];
+                    EliminaBarco(idBarco);
                 }
                 else
                 {
-                    int x = 1;
-                    if ((fila - 1) + numCasillas > 9)
-                    {
-                        x = -1;
-                    }
-                    int id = Barco.lastId + 1;
-                    if (!ComprobarBarco(numCasillas)) return;
-                    for (int y = 0; y < numCasillas; y++) // bucle comprobación casillas
-                    {
-                        int filaActual = fila + (y * x);
-                        int columnaActual = columna;
-                        string tag = filaActual.ToString() + "," + columnaActual.ToString();
-                        if (tablero.ComprobarCasilla(tag)[0] != -1)
-                        {
-                            MessageBox.Show("Ya hay un barco en esa casilla");
-                            return;
-                        }
-                    }
-                    // [imagenDelante, imagenMedio, imagenFin], [imagenFragata]
-                    for (int y = 0; y < numCasillas; y++) // bucle pintar
-                    {
-                        int filaActual = fila + (y * x);
-                        int columnaActual = columna;
-                        string tag = filaActual.ToString() + "," + columnaActual.ToString();
-                        PictureBox pbPintar = ObtenerPictureBox(tag);
 
-                        if (numCasillas == 1)
+                    //Aqui se abre el else de quitar los barcos.
+
+                    //MessageBox.Show("Fila " + fila + " Columna " + columna);
+
+                    if (cb_posicion.SelectedIndex == 0) //Indice 0 = a Horizontal, Indice 1 = Vertical.
+                    {
+                        int y = 1; // si es 1, va a la derecha, si es -1, va a la izquierda
+                        if ((columna - 1) + numCasillas > 9)
                         {
-                            // imagenFragata
+                            y = -1;
+                            // MessageBox.Show("No se puede poner el barco");
                         }
-                        else if (y == 0)
+                        int id = Barco.lastId + 1;
+                        if (!ComprobarBarco(numCasillas)) return;
+
+                        for (int x = 0; x < numCasillas; x++) // bucle comprobación casillas
                         {
-                            // imagenDelante
+                            int filaActual = fila;
+                            int columnaActual = columna + (x * y);
+                            string tag = filaActual.ToString() + "," + columnaActual.ToString();
+                            if (tablero.ComprobarCasilla(tag)[0] != -1)
+                            {
+                                MessageBox.Show("Ya hay un barco en esa casilla");
+                                return;
+                            }
+                            tablero.CambiarValorCasilla(tag, new int[] { id, -1 });
                         }
-                        else if (y + 1 == numCasillas)
+
+                        for (int x = 0; x < numCasillas; x++) // bucle pintar
                         {
-                            // imagenFin
+                            int filaActual = fila;
+                            int columnaActual = columna + (x * y);
+                            string tag = filaActual.ToString() + "," + columnaActual.ToString();
+                            PictureBox pbPintar = ObtenerPictureBox(tag);
+                            if (numCasillas == 1)
+                            {
+                                // imagenFragata
+                            }
+                            else if (x == 0)
+                            {
+                                // imagenDelante
+                            }
+                            else if (x + 1 == numCasillas)
+                            {
+                                // imagenFin
+                            }
+                            else if (x > 1)
+                            {
+                                // imagenMedio
+                            }
+                            pbPintar.BackColor = ObtenerColor(numCasillas);
+                            tablero.CambiarValorCasilla(tag, new int[] { id, -1 });
                         }
-                        else if (y > 1)
-                        {
-                            // imagenMedio
-                        }
-                        pbPintar.BackColor = ObtenerColor(numCasillas);
-                        tablero.CambiarValorCasilla(tag, new int[] { id, -1 });
+                        Barco barco = new Barco(numCasillas);
+                        RestarNumeroBarcos();
+                        barcos.Add(barco);
                     }
-                    Barco barco = new Barco(numCasillas);
-                    RestarNumeroBarcos();
-                    barcos.Add(barco);
+                    else
+                    {
+                        int x = 1;
+                        if ((fila - 1) + numCasillas > 9)
+                        {
+                            x = -1;
+                        }
+                        int id = Barco.lastId + 1;
+                        if (!ComprobarBarco(numCasillas)) return;
+                        for (int y = 0; y < numCasillas; y++) // bucle comprobación casillas
+                        {
+                            int filaActual = fila + (y * x);
+                            int columnaActual = columna;
+                            string tag = filaActual.ToString() + "," + columnaActual.ToString();
+                            if (tablero.ComprobarCasilla(tag)[0] != -1)
+                            {
+                                MessageBox.Show("Ya hay un barco en esa casilla");
+                                return;
+                            }
+                        }
+                        // [imagenDelante, imagenMedio, imagenFin], [imagenFragata]
+                        for (int y = 0; y < numCasillas; y++) // bucle pintar
+                        {
+                            int filaActual = fila + (y * x);
+                            int columnaActual = columna;
+                            string tag = filaActual.ToString() + "," + columnaActual.ToString();
+                            PictureBox pbPintar = ObtenerPictureBox(tag);
+
+                            if (numCasillas == 1)
+                            {
+                                // imagenFragata
+                            }
+                            else if (y == 0)
+                            {
+                                // imagenDelante
+                            }
+                            else if (y + 1 == numCasillas)
+                            {
+                                // imagenFin
+                            }
+                            else if (y > 1)
+                            {
+                                // imagenMedio
+                            }
+                            pbPintar.BackColor = ObtenerColor(numCasillas);
+                            tablero.CambiarValorCasilla(tag, new int[] { id, -1 });
+                        }
+                        Barco barco = new Barco(numCasillas);
+                        RestarNumeroBarcos();
+                        barcos.Add(barco);
+                    }
+
                 }
+                //Aquí se cierra el else de borrar los barcos.
             }
         }
 
@@ -286,13 +297,13 @@ namespace BatallaNaval
 
         private bool ComprobarBarco(int size)
         {
-            if (Barco.lastId + 1 > Barco.MAXID)
+           /* if (Barco.lastId + 1 > Barco.MAXID)
             {
                 MessageBox.Show("Se ha excedido el número máximo de barcos");
                 return false;
-            }
-            else 
-            {
+            }*/
+            /*else 
+            {*/
                 switch (size)
                 {
                     case 1:
@@ -331,7 +342,55 @@ namespace BatallaNaval
                         return false;
                 }
                 return true;
+            //}
+        }
+
+        private void EliminaBarco(int id)
+        {
+            //Creamos un Array List que contendrá los picturebox que tengan el id del barco que se le pasa al método.
+            List<PictureBox> casillas = new List<PictureBox>();
+            foreach (Control c in tableLayoutPanel1.Controls)
+            {
+
+                PictureBox picture = c as PictureBox;
+
+                if(picture != null)
+                {
+                    int idPicture = tablero.ComprobarCasilla(picture.Tag.ToString())[0];
+
+                    if (idPicture == id)
+                    {
+                        casillas.Add(picture);
+                        tablero.CambiarValorCasilla(picture.Tag.ToString(), new int[] { -1, -1 });
+                    }
+                }
             }
+
+            foreach(PictureBox casilla in casillas)
+            {
+                casilla.BackColor = DefaultBackColor;
+            }
+
+            int barcoSize = casillas.Count();
+
+            switch(barcoSize)
+            {
+                case 1:
+                    Barco.numFragatas--;
+                    break;
+                case 2:
+                    Barco.numDestructores--;
+                    break;
+                case 3:
+                    Barco.numSubmarinos--;
+                    break;
+                case 4:
+                    Barco.numPortaaviones--;
+                    break;
+                default:
+                    throw new Exception("Número de casillas inválido");
+            }
+            RestarNumeroBarcos();
         }
     }
 }

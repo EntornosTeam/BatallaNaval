@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BatallaNaval
 {
@@ -20,7 +21,7 @@ namespace BatallaNaval
 
         //Constantes
 
-        public const int MAXID = 9;  //Variable Final, Numero Final ID.
+        //public const int MAXID = 9;  //Variable Final, Numero Final ID.
         public const int MAXFRAGATAS = 4;
         public const int MAXDESTRUCTORES = 3;
         public const int MAXSUBMARINOS = 2;
@@ -36,7 +37,7 @@ namespace BatallaNaval
         {
             //Gestión de Excepciones
 
-            if (lastId + 1 > MAXID) throw new Exception("Se ha excedido el número máximo de barcos");
+            //if (lastId + 1 > MAXID) throw new Exception("Se ha excedido el número máximo de barcos");
             this.Size = s;
             switch (s)
             {
@@ -60,6 +61,7 @@ namespace BatallaNaval
                     throw new Exception("El tamaño es incorrecto.");
             }
             this.Id = ++lastId;
+            MessageBox.Show(this.Id.ToString());
         }
     }
 }
