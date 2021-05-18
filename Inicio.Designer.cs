@@ -1,7 +1,7 @@
 ﻿
 namespace BatallaNaval
 {
-    partial class Form1
+    partial class Inicio
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -45,7 +45,7 @@ namespace BatallaNaval
             "Portaaviones",
             "4",
             "1"}, -1);
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.btn_comenzar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox100 = new System.Windows.Forms.PictureBox();
@@ -1936,7 +1936,7 @@ namespace BatallaNaval
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader3.Width = 93;
             // 
-            // Form1
+            // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1947,7 +1947,7 @@ namespace BatallaNaval
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btn_comenzar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "Inicio";
             this.Text = "Batalla Naval";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -2058,7 +2058,6 @@ namespace BatallaNaval
 
         #endregion
         private System.Windows.Forms.Button btn_comenzar;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -2186,6 +2185,7 @@ namespace BatallaNaval
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 

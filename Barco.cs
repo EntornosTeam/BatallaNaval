@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace BatallaNaval
 {
-    class Barco
+    public class Barco
     {
         //Variables generales
 

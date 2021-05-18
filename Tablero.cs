@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BatallaNaval
 {
-    class Tablero
+    public class Tablero
     {
         List<List<int[]>> filas;
 

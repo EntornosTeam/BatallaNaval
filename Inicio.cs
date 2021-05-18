@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace BatallaNaval
 {
-    public partial class Form1 : Form
+    public partial class Inicio : Form
     {
-        Tablero tablero;
-        List<Barco> barcos;
+        public Tablero tablero;
+        public List<Barco> barcos;
   
-        public Form1()
+        public Inicio()
         {
             InitializeComponent();
             AssignTag();
@@ -68,6 +68,7 @@ namespace BatallaNaval
             }
             else
             {
+                
                 PictureBox pb = sender as PictureBox;
 
                 int numCasillas = int.Parse(listView1.SelectedItems[0].SubItems[1].Text.ToString());//4; //Número de casillas que ocupa el Barco.
@@ -143,6 +144,7 @@ namespace BatallaNaval
                         RestarNumeroBarcos();
                         barcos.Add(barco);
                         PoderEmpezar();
+                        
                     }
                     else
                     {
@@ -193,7 +195,7 @@ namespace BatallaNaval
                         }
                         Barco barco = new Barco(numCasillas);
                         RestarNumeroBarcos();
-                        barcos.Add(barco);
+                        barcos.Add(barco);          
                         PoderEmpezar();
                     }
 
@@ -395,12 +397,22 @@ namespace BatallaNaval
                     throw new Exception("Número de casillas inválido");
             }
             RestarNumeroBarcos();
+            Barco barco = null;
+            foreach (Barco b in barcos)
+            {
+                if(b.Id == id)
+                {
+                    barco = b;
+                }
+
+            }
+            barcos.Remove(barco);
             PoderEmpezar();
         }
 
         private void btn_comenzar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void PoderEmpezar()
