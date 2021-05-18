@@ -142,6 +142,7 @@ namespace BatallaNaval
                         Barco barco = new Barco(numCasillas);
                         RestarNumeroBarcos();
                         barcos.Add(barco);
+                        PoderEmpezar();
                     }
                     else
                     {
@@ -193,6 +194,7 @@ namespace BatallaNaval
                         Barco barco = new Barco(numCasillas);
                         RestarNumeroBarcos();
                         barcos.Add(barco);
+                        PoderEmpezar();
                     }
 
                 }
@@ -393,6 +395,22 @@ namespace BatallaNaval
                     throw new Exception("Número de casillas inválido");
             }
             RestarNumeroBarcos();
+            PoderEmpezar();
+        }
+
+        private void btn_comenzar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PoderEmpezar()
+        {
+            bool listo = true;
+            foreach (ListViewItem item in listView1.Items)
+            {
+                if (int.Parse(item.SubItems[2].Text) != 0) listo = false;
+            }
+            btn_comenzar.Enabled = listo;
         }
     }
 }

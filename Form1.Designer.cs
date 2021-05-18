@@ -280,12 +280,14 @@ namespace BatallaNaval
             // 
             // btn_comenzar
             // 
+            this.btn_comenzar.Enabled = false;
             this.btn_comenzar.Location = new System.Drawing.Point(356, 576);
             this.btn_comenzar.Name = "btn_comenzar";
             this.btn_comenzar.Size = new System.Drawing.Size(481, 46);
             this.btn_comenzar.TabIndex = 2;
             this.btn_comenzar.Text = "Comenzar Juego";
             this.btn_comenzar.UseVisualStyleBackColor = true;
+            this.btn_comenzar.Click += new System.EventHandler(this.btn_comenzar_Click);
             // 
             // tableLayoutPanel1
             // 
