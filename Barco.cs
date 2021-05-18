@@ -61,7 +61,6 @@ namespace BatallaNaval
                     throw new Exception("El tamaño es incorrecto.");
             }
             this.Id = ++lastId;
-            MessageBox.Show(this.Id.ToString());
         }
     }
 }
