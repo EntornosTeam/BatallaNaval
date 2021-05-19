@@ -17,6 +17,7 @@ namespace BatallaNaval
         public Tablero tablero;
         List<Barco> barcos;
         Jugador jug = new Jugador();
+        public bool replay = false;
 
         public Juego(TableLayoutPanel tabla, Tablero tablero, List<Barco> barcos)
         {
@@ -75,7 +76,7 @@ namespace BatallaNaval
                     jug.RestarNumDisparos();
                     MessageBox.Show(jug.NumeroDisparos.ToString());
                     pb.BackColor = Color.Blue;
-                    if (jug.NumeroDisparos == 0) GameOver();
+                    if (jug.NumeroDisparos == 0) Perder();
                 }
                 else // Ha tocado barco
                 {
@@ -93,7 +94,7 @@ namespace BatallaNaval
                     pb.BackColor = Color.Red;
                     if (tablero.ComprobarVictoria())
                     {
-                        Win();
+                        Ganar();
                     }
                 }
                 
@@ -106,11 +107,14 @@ namespace BatallaNaval
 
         }
 
-        public void GameOver()
+        public void Perder()
         {
-            MessageBox.Show("Has perdido noob");
+            GameOver gameOver = new GameOver();
+            gameOver.ShowDialog();
+            replay = gameOver.replay;
+            this.Close();
         }
-        public void Win()
+        public void Ganar()
         {
             MessageBox.Show("Has ganado bro");
             foreach (Control c in tabla.Controls)
@@ -121,6 +125,10 @@ namespace BatallaNaval
                     RemoveClickEvent(pb);
                 }
             }
+            Win win = new Win();
+            win.ShowDialog();
+            replay = win.replay;
+            this.Close();
         }
     }
 }

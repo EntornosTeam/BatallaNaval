@@ -29,12 +29,59 @@ namespace BatallaNaval
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btn_reintentar = new System.Windows.Forms.Button();
+            this.btn_salir = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // btn_reintentar
+            // 
+            this.btn_reintentar.Location = new System.Drawing.Point(421, 367);
+            this.btn_reintentar.Name = "btn_reintentar";
+            this.btn_reintentar.Size = new System.Drawing.Size(236, 61);
+            this.btn_reintentar.TabIndex = 1;
+            this.btn_reintentar.Text = "Volver a comenzar";
+            this.btn_reintentar.UseVisualStyleBackColor = true;
+            this.btn_reintentar.Click += new System.EventHandler(this.btn_reintentar_Click);
+            // 
+            // btn_salir
+            // 
+            this.btn_salir.Location = new System.Drawing.Point(110, 367);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(236, 61);
+            this.btn_salir.TabIndex = 0;
+            this.btn_salir.Text = "Salir";
+            this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btn_reintentar);
+            this.panel1.Controls.Add(this.btn_salir);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(775, 482);
+            this.panel1.TabIndex = 1;
+            // 
+            // Win
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Win";
+            this.ClientSize = new System.Drawing.Size(775, 482);
+            this.Controls.Add(this.panel1);
+            this.Name = "Win";
+            this.Text = "Victoria!!!";
+            this.panel1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btn_reintentar;
+        private System.Windows.Forms.Button btn_salir;
+        private System.Windows.Forms.Panel panel1;
     }
 }
