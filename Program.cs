@@ -19,6 +19,7 @@ namespace BatallaNaval
             bool close = true;
             do
             {
+                close = true;
                 Menu menu = new Menu();
                 menu.ShowDialog();
                 bool startGame = menu.startGame;
@@ -27,11 +28,12 @@ namespace BatallaNaval
                     bool play = false;
                     Inicio inicio = new Inicio();
                     inicio.ShowDialog();
+                    play = inicio.play;
                     if (play)
                     {
                         Juego juego = new Juego(inicio.tableLayoutPanel1, inicio.tablero, inicio.barcos);
                         juego.ShowDialog();
-                        //close = juego.replay;
+                        close = !juego.replay;
                     }
                 }
             } while (!close);

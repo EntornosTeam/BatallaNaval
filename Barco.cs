@@ -62,5 +62,13 @@ namespace BatallaNaval
             }
             this.Id = ++lastId;
         }
+
+        public static void ResetearNumeroBarcos()
+        {
+            numFragatas = 0;
+            numDestructores = 0;
+            numSubmarinos = 0;
+            numPortaaviones = 0;
+        }
     }
 }

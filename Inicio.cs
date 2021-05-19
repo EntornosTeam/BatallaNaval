@@ -15,6 +15,7 @@ namespace BatallaNaval
         public Tablero tablero;
         public List<Barco> barcos;
         public List<Bitmap> images = new List<Bitmap>();
+        public bool play = false;
         
         public Inicio()
         {
@@ -413,6 +414,8 @@ namespace BatallaNaval
 
         private void btn_comenzar_Click(object sender, EventArgs e)
         {
+            play = true;
+            Barco.ResetearNumeroBarcos();
             this.Close();
         }
 

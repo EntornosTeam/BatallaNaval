@@ -30,39 +30,40 @@ namespace BatallaNaval
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_reintentar = new System.Windows.Forms.Button();
+            this.btn_salir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_reintentar);
+            this.panel1.Controls.Add(this.btn_salir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(775, 482);
             this.panel1.TabIndex = 0;
             // 
-            // button2
+            // btn_reintentar
             // 
-            this.button2.Location = new System.Drawing.Point(401, 367);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(236, 61);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Volver a comenzar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_reintentar.Location = new System.Drawing.Point(421, 367);
+            this.btn_reintentar.Name = "btn_reintentar";
+            this.btn_reintentar.Size = new System.Drawing.Size(236, 61);
+            this.btn_reintentar.TabIndex = 1;
+            this.btn_reintentar.Text = "Volver a comenzar";
+            this.btn_reintentar.UseVisualStyleBackColor = true;
+            this.btn_reintentar.Click += new System.EventHandler(this.btn_reintentar_Click);
             // 
-            // button1
+            // btn_salir
             // 
-            this.button1.Location = new System.Drawing.Point(110, 367);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(236, 61);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Salir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_salir.Location = new System.Drawing.Point(110, 367);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(236, 61);
+            this.btn_salir.TabIndex = 0;
+            this.btn_salir.Text = "Salir";
+            this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.Click += new System.EventHandler(this.button1_Click);
             // 
             // GameOver
             // 
@@ -74,7 +75,8 @@ namespace BatallaNaval
             this.MaximizeBox = false;
             this.Name = "GameOver";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Derrota";
+            this.Text = "Has perdido";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.GameOver_Paint);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -83,7 +85,7 @@ namespace BatallaNaval
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_reintentar;
+        private System.Windows.Forms.Button btn_salir;
     }
 }

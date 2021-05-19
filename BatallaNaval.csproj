@@ -121,7 +121,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\barco.png" />
+    <Folder Include="Fonts\" />
+    <Folder Include="Sounds\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\mar.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
