@@ -34,7 +34,7 @@ namespace BatallaNaval
         /           En el índice 1: el estado de la casilla -> -1 no tocado             /
         /                                                       0 disparo a agua        /
         /                                                       1 tocado                /
-        /                                                       2 tocado y hundido      /
+        /                                                       2 hundido               /
         *////////////////////////////////////////////////////////////////////////////////
 
 
@@ -69,19 +69,42 @@ namespace BatallaNaval
             casRef[1] = estado;
             return;
         }
+        /// <summary>
+        /// Recorre el arraylist de barcos y comprueba si los barcos del id indicado están tocados. Si todos han sido tocados los marca como hundido.
+        /// </summary>
+        /// <param name="id">Id del barco</param>
+        /// <returns>True si está hundido</returns>
+        public bool ComprobarTocadoHundido(int id) 
+        {
+            bool hundido = true;
+            foreach (List<int[]> fila in filas)
+            {
+                foreach (int[] casilla in fila)
+                {
+                    if (casilla[0] == id)
+                    {
+                        if (casilla[1] == -1) hundido = false;
+                    }
 
-        //public void RecorrerTablero()
-        //{
-        //    int[] valor = ComprobarCasilla("2, 5");
-        //    foreach (List<int[]> fila in filas)
-        //    {
-        //        foreach (int[] casilla in fila)
-        //        {
-        //            if ()
-        //            // fila.IndexOf(casilla);
+                }
+            }
+            if (hundido)
+            {
+                foreach (List<int[]> fila in filas)
+                {
+                    foreach (int[] casilla in fila)
+                    {
+                        if (casilla[0] == id)
+                        {
+                            casilla[1] = 2;
+                        }
 
-        //        }
-        //    }
-        //}
+                    }
+                }
+            }
+            
+            return hundido;
+        }
+
     }
 }

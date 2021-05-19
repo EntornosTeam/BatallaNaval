@@ -18,6 +18,10 @@ namespace BatallaNaval
         {
             get { return numeroDisparos;  }
             set { numeroDisparos = value; }
-        } 
+        }
+        public void RestarNumDisparos()
+        {
+            this.numeroDisparos--;
+        }
     }
 }

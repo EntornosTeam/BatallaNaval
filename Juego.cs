@@ -16,6 +16,7 @@ namespace BatallaNaval
         public TableLayoutPanel tabla;
         public Tablero tablero;
         List<Barco> barcos;
+        Jugador jug = new Jugador();
 
         public Juego(TableLayoutPanel tabla, Tablero tablero, List<Barco> barcos)
         {
@@ -25,6 +26,7 @@ namespace BatallaNaval
                 PictureBox pb = c as PictureBox;
                 if (pb != null)
                 {
+                    pb.BackColor = default;
                     RemoveClickEvent(pb);
                     pb.Click += new System.EventHandler(pictureBox1_Click);
                 }
@@ -56,7 +58,53 @@ namespace BatallaNaval
 
         private void pictureBox1_Click(Object sender, EventArgs e)
         {
-            MessageBox.Show("Funciona jeje");
+            PictureBox pb = sender as PictureBox;
+            int [] casilla = tablero.ComprobarCasilla(pb.Tag.ToString());
+
+            MessageBox.Show((casilla[0] + "," + casilla[1]).ToString());
+
+            if(casilla[1] == -1) // No ha sido tocado
+            {
+                int estado = -1;
+                if(casilla[0] == -1) // Ha tocado agua
+                {
+                    estado = 0;
+                    tablero.CambiarEstado(pb.Tag.ToString(), estado);
+                    MessageBox.Show("Ha tocado agua");
+                    //Restar número de disparos del jugador
+                    jug.RestarNumDisparos();
+                    MessageBox.Show(jug.NumeroDisparos.ToString());
+                    pb.BackColor = Color.Blue;
+                    if (jug.NumeroDisparos == 0) GameOver();
+                }
+                else // Ha tocado barco
+                {
+                    estado = 1;
+                    tablero.CambiarEstado(pb.Tag.ToString(), estado);
+                    estado = tablero.ComprobarTocadoHundido(casilla[0])?2:1;
+                    if(estado == 2)
+                    {
+                        MessageBox.Show("Tocado y Hundido");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha tocado un barco");
+                    }
+                    pb.BackColor = Color.Red;
+                }
+                
+                
+            }
+            else // Ya ha sido tocado
+            {
+                MessageBox.Show("Esta casilla ya ha sido tocada");
+            }
+
+        }
+
+        public void GameOver()
+        {
+            MessageBox.Show("Has perdido noob");
         }
     }
 }
