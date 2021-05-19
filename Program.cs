@@ -16,11 +16,29 @@ namespace BatallaNaval
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Inicio inicio = new Inicio();
-            inicio.ShowDialog();
-            Juego juego = new Juego(inicio.tableLayoutPanel1, inicio.tablero, inicio.barcos);
-            juego.ShowDialog();
+            bool close = true;
+            do
+            {
+                Menu menu = new Menu();
+                menu.ShowDialog();
+                bool startGame = menu.startGame;
+                if (startGame)
+                {
+                    bool play = false;
+                    Inicio inicio = new Inicio();
+                    inicio.ShowDialog();
+                    if (play)
+                    {
+                        Juego juego = new Juego(inicio.tableLayoutPanel1, inicio.tablero, inicio.barcos);
+                        juego.ShowDialog();
+                        close = juego.replay;
+                    }
+                }
+            } while (!close);
+            
+
 
         }
     }
 }
+
