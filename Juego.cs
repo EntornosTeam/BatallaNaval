@@ -32,7 +32,7 @@ namespace BatallaNaval
                 }
             }
 
-
+            this.tabla = tabla;
             this.tablero = tablero;
             this.barcos = barcos;
             InitializeComponent();
@@ -91,6 +91,10 @@ namespace BatallaNaval
                         MessageBox.Show("Ha tocado un barco");
                     }
                     pb.BackColor = Color.Red;
+                    if (tablero.ComprobarVictoria())
+                    {
+                        Win();
+                    }
                 }
                 
                 
@@ -105,6 +109,18 @@ namespace BatallaNaval
         public void GameOver()
         {
             MessageBox.Show("Has perdido noob");
+        }
+        public void Win()
+        {
+            MessageBox.Show("Has ganado bro");
+            foreach (Control c in tabla.Controls)
+            {
+                PictureBox pb = c as PictureBox;
+                if (pb != null)
+                {
+                    RemoveClickEvent(pb);
+                }
+            }
         }
     }
 }

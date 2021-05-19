@@ -106,5 +106,21 @@ namespace BatallaNaval
             return hundido;
         }
 
+        public bool ComprobarVictoria()
+        {
+            bool victoria = true;
+            foreach (List<int[]> fila in filas)
+            {
+                foreach (int[] casilla in fila)
+                {
+                    if (casilla[0] != -1)
+                    {
+                        if (casilla[1] == -1) victoria = false;
+                    }
+
+                }
+            }
+            return victoria;
+        }
     }
 }
