@@ -14,7 +14,8 @@ namespace BatallaNaval
     {
         public Tablero tablero;
         public List<Barco> barcos;
-  
+        public List<Bitmap> images = new List<Bitmap>();
+        
         public Inicio()
         {
             InitializeComponent();
