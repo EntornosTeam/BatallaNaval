@@ -18,9 +18,14 @@ namespace BatallaNaval
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_jugar_Click(object sender, EventArgs e)
         {
             startGame = true;
+            this.Close();
+        }
+
+        private void btn_salir_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

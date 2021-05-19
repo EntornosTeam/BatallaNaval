@@ -30,8 +30,8 @@ namespace BatallaNaval
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +45,15 @@ namespace BatallaNaval
             this.panel1.Size = new System.Drawing.Size(775, 482);
             this.panel1.TabIndex = 0;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(401, 367);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(236, 61);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Volver a comenzar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(110, 367);
@@ -55,22 +64,16 @@ namespace BatallaNaval
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(401, 367);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(236, 61);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Volver a comenzar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // GameOver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 482);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "GameOver";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Derrota";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

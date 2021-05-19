@@ -31,7 +31,7 @@ namespace BatallaNaval
                     {
                         Juego juego = new Juego(inicio.tableLayoutPanel1, inicio.tablero, inicio.barcos);
                         juego.ShowDialog();
-                        close = juego.replay;
+                        //close = juego.replay;
                     }
                 }
             } while (!close);
