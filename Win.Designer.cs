@@ -37,26 +37,35 @@ namespace BatallaNaval
             // 
             // btn_reintentar
             // 
+            this.btn_reintentar.BackColor = System.Drawing.Color.White;
+            this.btn_reintentar.FlatAppearance.BorderSize = 0;
+            this.btn_reintentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reintentar.Font = new System.Drawing.Font("Pirate Ship", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_reintentar.Location = new System.Drawing.Point(421, 367);
             this.btn_reintentar.Name = "btn_reintentar";
             this.btn_reintentar.Size = new System.Drawing.Size(236, 61);
             this.btn_reintentar.TabIndex = 1;
             this.btn_reintentar.Text = "Volver a comenzar";
-            this.btn_reintentar.UseVisualStyleBackColor = true;
+            this.btn_reintentar.UseVisualStyleBackColor = false;
             this.btn_reintentar.Click += new System.EventHandler(this.btn_reintentar_Click);
             // 
             // btn_salir
             // 
+            this.btn_salir.BackColor = System.Drawing.Color.White;
+            this.btn_salir.FlatAppearance.BorderSize = 0;
+            this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_salir.Font = new System.Drawing.Font("Pirate Ship", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_salir.Location = new System.Drawing.Point(110, 367);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(236, 61);
             this.btn_salir.TabIndex = 0;
             this.btn_salir.Text = "Salir";
-            this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.UseVisualStyleBackColor = false;
             this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.btn_reintentar);
             this.panel1.Controls.Add(this.btn_salir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -69,6 +78,7 @@ namespace BatallaNaval
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(775, 482);
             this.Controls.Add(this.panel1);
             this.Name = "Win";
