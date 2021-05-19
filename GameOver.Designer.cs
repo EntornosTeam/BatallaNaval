@@ -73,6 +73,7 @@ namespace BatallaNaval
             this.Controls.Add(this.panel1);
             this.Name = "GameOver";
             this.Text = "Has perdido";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.GameOver_Paint);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
