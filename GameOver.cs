@@ -21,8 +21,8 @@ namespace BatallaNaval
         {
             InitializeComponent();
             pFonts.AddFontFile("../../Fonts/Pirate Ship.ttf");
-            btn_salir.Font = new Font(pFonts.Families[0], 20, FontStyle.Regular);
-            btn_reintentar.Font = new Font(pFonts.Families[0], 20, FontStyle.Regular);
+            btn_salir.Font = new Font(pFonts.Families[0], 15, FontStyle.Regular);
+            btn_reintentar.Font = new Font(pFonts.Families[0], 15, FontStyle.Regular);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,8 +38,22 @@ namespace BatallaNaval
 
         private void GameOver_Paint(object sender, PaintEventArgs e)
         {
-            btn_salir.Font = new Font(pFonts.Families[0], 20, FontStyle.Regular);
-            btn_reintentar.Font = new Font(pFonts.Families[0], 20, FontStyle.Regular);
+            btn_salir.Font = new Font(pFonts.Families[0], 15, FontStyle.Regular);
+            btn_reintentar.Font = new Font(pFonts.Families[0], 15, FontStyle.Regular);
+        }
+
+        private void btn_salir_MouseEnter(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            btn.BackColor = Color.Black;
+            btn.ForeColor = Color.White;
+        }
+
+        private void btn_salir_MouseLeave(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            btn.BackColor = Color.White;
+            btn.ForeColor = Color.Black;
         }
     }
 }

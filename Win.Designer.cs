@@ -48,6 +48,8 @@ namespace BatallaNaval
             this.btn_reintentar.Text = "Volver a comenzar";
             this.btn_reintentar.UseVisualStyleBackColor = false;
             this.btn_reintentar.Click += new System.EventHandler(this.btn_reintentar_Click);
+            this.btn_reintentar.MouseEnter += new System.EventHandler(this.btn_salir_MouseEnter);
+            this.btn_reintentar.MouseLeave += new System.EventHandler(this.btn_salir_MouseLeave);
             // 
             // btn_salir
             // 
@@ -62,6 +64,8 @@ namespace BatallaNaval
             this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = false;
             this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
+            this.btn_salir.MouseEnter += new System.EventHandler(this.btn_salir_MouseEnter);
+            this.btn_salir.MouseLeave += new System.EventHandler(this.btn_salir_MouseLeave);
             // 
             // panel1
             // 
@@ -78,14 +82,15 @@ namespace BatallaNaval
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(775, 482);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Win";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Victoria!!!";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Win_Paint);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
