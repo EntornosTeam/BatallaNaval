@@ -63,9 +63,9 @@ namespace BatallaNaval
             // btn_reintentar
             // 
             this.btn_reintentar.BackColor = System.Drawing.Color.White;
-            this.btn_reintentar.FlatAppearance.BorderSize = 0;
+            this.btn_reintentar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_reintentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_reintentar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reintentar.Font = new System.Drawing.Font("Pirate Ship", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_reintentar.Location = new System.Drawing.Point(439, 342);
             this.btn_reintentar.Name = "btn_reintentar";
             this.btn_reintentar.Size = new System.Drawing.Size(240, 61);
@@ -79,9 +79,9 @@ namespace BatallaNaval
             // btn_salir
             // 
             this.btn_salir.BackColor = System.Drawing.Color.White;
-            this.btn_salir.FlatAppearance.BorderSize = 0;
+            this.btn_salir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salir.Font = new System.Drawing.Font("Pirate Ship", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_salir.Location = new System.Drawing.Point(113, 342);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(240, 61);

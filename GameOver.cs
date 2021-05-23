@@ -22,14 +22,14 @@ namespace BatallaNaval
             InitializeComponent();
             pFonts.AddFontFile("../../Fonts/Pirate Ship.ttf");
             pFonts.AddFontFile("../../Fonts/ARMY RUST.ttf");
-            btn_salir.Font = new Font(pFonts.Families[0], 15, FontStyle.Regular);
-            btn_reintentar.Font = new Font(pFonts.Families[0], 15, FontStyle.Regular);
+            btn_salir.Font = new Font(pFonts.Families[1], 12, FontStyle.Regular);
+            btn_reintentar.Font = new Font(pFonts.Families[1], 12, FontStyle.Regular);
+            lbl_derrota.Font = new Font(pFonts.Families[0], 79, FontStyle.Regular);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
-            lbl_derrota.Font = new Font(pFonts.Families[1], 70, FontStyle.Regular);
         }
 
         private void btn_reintentar_Click(object sender, EventArgs e)
@@ -40,9 +40,9 @@ namespace BatallaNaval
 
         private void GameOver_Paint(object sender, PaintEventArgs e)
         {
-            btn_salir.Font = new Font(pFonts.Families[0], 15, FontStyle.Regular);
-            lbl_derrota.Font = new Font(pFonts.Families[1], 70, FontStyle.Regular);
-            btn_reintentar.Font = new Font(pFonts.Families[0], 15, FontStyle.Regular);
+            btn_salir.Font = new Font(pFonts.Families[1], 12, FontStyle.Regular);
+            lbl_derrota.Font = new Font(pFonts.Families[0], 79, FontStyle.Regular);
+            btn_reintentar.Font = new Font(pFonts.Families[1], 12, FontStyle.Regular);
         }
 
         private void btn_salir_MouseEnter(object sender, EventArgs e)
