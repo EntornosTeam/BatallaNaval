@@ -9,12 +9,16 @@ using System.Media;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
+using System.Reflection;
+using System.IO;
 
 namespace BatallaNaval
 {
     public partial class Menu : Form
     {
         WindowsMediaPlayer music = new WindowsMediaPlayer();
+        
+
 
         public bool startGame = false;
         public Menu()
@@ -35,7 +39,7 @@ namespace BatallaNaval
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            music.URL = @"Sounds/One Piece Music.mp3";
+            music.URL =  "Sounds\\One Piece Music.mp3";
             tb_volume.Value = 4;
         }
 
