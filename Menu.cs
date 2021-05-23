@@ -40,7 +40,7 @@ namespace BatallaNaval
         private void Menu_Load(object sender, EventArgs e)
         {
             music.URL =  "Sounds\\One Piece Music.mp3";
-            tb_volume.Value = 4;
+            tb_volume.Value = (int)Math.Sqrt(Volume.volumen);
         }
 
         private void tb_volume_ValueChanged(object sender, EventArgs e)

@@ -175,6 +175,8 @@ namespace BatallaNaval
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pb_music = new System.Windows.Forms.PictureBox();
+            this.tb_volume = new System.Windows.Forms.TrackBar();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox100)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox99)).BeginInit();
@@ -276,6 +278,8 @@ namespace BatallaNaval
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_music)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_volume)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_comenzar
@@ -1936,12 +1940,33 @@ namespace BatallaNaval
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader3.Width = 93;
             // 
+            // pb_music
+            // 
+            this.pb_music.Image = global::BatallaNaval.Properties.Resources.note2;
+            this.pb_music.Location = new System.Drawing.Point(15, 612);
+            this.pb_music.Name = "pb_music";
+            this.pb_music.Size = new System.Drawing.Size(28, 50);
+            this.pb_music.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_music.TabIndex = 8;
+            this.pb_music.TabStop = false;
+            this.pb_music.Click += new System.EventHandler(this.pb_music_Click);
+            // 
+            // tb_volume
+            // 
+            this.tb_volume.Location = new System.Drawing.Point(49, 626);
+            this.tb_volume.Name = "tb_volume";
+            this.tb_volume.Size = new System.Drawing.Size(104, 45);
+            this.tb_volume.TabIndex = 7;
+            this.tb_volume.ValueChanged += new System.EventHandler(this.tb_volume_ValueChanged);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(916, 683);
+            this.Controls.Add(this.pb_music);
+            this.Controls.Add(this.tb_volume);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.cb_posicion);
@@ -1952,6 +1977,7 @@ namespace BatallaNaval
             this.MaximizeBox = false;
             this.Name = "Inicio";
             this.Text = "Batalla Naval";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Inicio_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox100)).EndInit();
@@ -2054,6 +2080,8 @@ namespace BatallaNaval
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_music)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_volume)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2189,6 +2217,8 @@ namespace BatallaNaval
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         public System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.PictureBox pb_music;
+        private System.Windows.Forms.TrackBar tb_volume;
     }
 }
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace BatallaNaval
 {
@@ -25,7 +26,8 @@ namespace BatallaNaval
             Properties.Resources.Submarino1, Properties.Resources.Submarino2, Properties.Resources.Submarino3,
             Properties.Resources.portaaviones1, Properties.Resources.portaaviones2, Properties.Resources.portaaviones3, Properties.Resources.portaaviones4};
         public bool play = false;
-        
+        WindowsMediaPlayer music = new WindowsMediaPlayer();
+
         public Inicio()
         {
             InitializeComponent();
@@ -48,7 +50,7 @@ namespace BatallaNaval
                 PictureBox pb = c as PictureBox;
                 if (pb != null)
                 {
-                    pb.SizeMode = PictureBoxSizeMode.Zoom;
+                    pb.SizeMode = PictureBoxSizeMode.StretchImage;
                     pb.Tag = fila + "," + columna;
                     // fila++;
                     if (columna == 0)
@@ -73,7 +75,8 @@ namespace BatallaNaval
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            music.URL = "Sounds\\Piratas del caribe BSO.mp3";
+            tb_volume.Value = (int)Math.Sqrt(Volume.volumen);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -454,6 +457,47 @@ namespace BatallaNaval
                 if (int.Parse(item.SubItems[2].Text) != 0) listo = false;
             }
             btn_comenzar.Enabled = listo;
+        }
+
+        // Music
+
+        private void tb_volume_ValueChanged(object sender, EventArgs e)
+        {
+            Volume.volumen = (int)Math.Pow(tb_volume.Value, 2);
+            music.settings.volume = Volume.volumen;
+            if (music.settings.volume == 0)
+            {
+                pb_music.Image = Properties.Resources.note4;
+            }
+            else
+            {
+                pb_music.Image = Properties.Resources.note2;
+            }
+        }
+
+        private void pb_music_Click(object sender, EventArgs e)
+        {
+            if (tb_volume.Value != 0)
+            {
+                Volume.lastVolumen = tb_volume.Value * 10;
+                tb_volume.Value = 0;
+            }
+            else
+            {
+                if (Volume.lastVolumen != 0)
+                {
+                    tb_volume.Value = Volume.lastVolumen / 10;
+                }
+                else
+                {
+                    tb_volume.Value = 5;
+                }
+            }
+        }
+
+        private void Inicio_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            music.controls.stop();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace BatallaNaval
 {
     public static class Volume
     {
-        public static int volumen;
+        public static int volumen = 16;
         public static int lastVolumen;
     }
 }

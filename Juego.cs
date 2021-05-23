@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace BatallaNaval
 {
@@ -18,6 +19,7 @@ namespace BatallaNaval
         List<Barco> barcos;
         Jugador jug = new Jugador();
         public bool replay = false;
+        WindowsMediaPlayer music = new WindowsMediaPlayer();
 
         public Juego(TableLayoutPanel tabla, Tablero tablero, List<Barco> barcos)
         {
@@ -28,6 +30,7 @@ namespace BatallaNaval
                 if (pb != null)
                 {
                     pb.BackColor = default;
+                    pb.Image = null;
                     RemoveClickEvent(pb);
                     pb.Click += new System.EventHandler(pictureBox1_Click);
                 }
@@ -128,6 +131,53 @@ namespace BatallaNaval
             win.ShowDialog();
             replay = win.replay;
             this.Close();
+        }
+
+        // Music
+
+        private void tb_volume_ValueChanged(object sender, EventArgs e)
+        {
+            Volume.volumen = (int)Math.Pow(tb_volume.Value, 2);
+            music.settings.volume = Volume.volumen;
+            if (music.settings.volume == 0)
+            {
+                pb_music.Image = Properties.Resources.note4;
+            }
+            else
+            {
+                pb_music.Image = Properties.Resources.note2;
+            }
+        }
+
+        private void pb_music_Click(object sender, EventArgs e)
+        {
+            if (tb_volume.Value != 0)
+            {
+                Volume.lastVolumen = tb_volume.Value * 10;
+                tb_volume.Value = 0;
+            }
+            else
+            {
+                if (Volume.lastVolumen != 0)
+                {
+                    tb_volume.Value = Volume.lastVolumen / 10;
+                }
+                else
+                {
+                    tb_volume.Value = 5;
+                }
+            }
+        }
+
+        private void Juego_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            music.controls.stop();
+        }
+
+        private void Juego_Load(object sender, EventArgs e)
+        {
+            music.URL = "Sounds/Sword of Destiny.mp3";
+            tb_volume.Value = (int)Math.Sqrt(Volume.volumen);
         }
     }
 }
