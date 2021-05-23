@@ -33,7 +33,11 @@ namespace BatallaNaval
             this.btn_jugar = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tb_volume = new System.Windows.Forms.TrackBar();
+            this.pb_music = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_volume)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_music)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_jugar
@@ -69,12 +73,33 @@ namespace BatallaNaval
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // tb_volume
+            // 
+            this.tb_volume.Location = new System.Drawing.Point(51, 406);
+            this.tb_volume.Name = "tb_volume";
+            this.tb_volume.Size = new System.Drawing.Size(104, 45);
+            this.tb_volume.TabIndex = 3;
+            this.tb_volume.ValueChanged += new System.EventHandler(this.tb_volume_ValueChanged);
+            // 
+            // pb_music
+            // 
+            this.pb_music.Image = global::BatallaNaval.Properties.Resources.note2;
+            this.pb_music.Location = new System.Drawing.Point(17, 392);
+            this.pb_music.Name = "pb_music";
+            this.pb_music.Size = new System.Drawing.Size(28, 50);
+            this.pb_music.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_music.TabIndex = 4;
+            this.pb_music.TabStop = false;
+            this.pb_music.Click += new System.EventHandler(this.pb_music_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pb_music);
+            this.Controls.Add(this.tb_volume);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.btn_jugar);
@@ -83,9 +108,13 @@ namespace BatallaNaval
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);
             this.Load += new System.EventHandler(this.Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_volume)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_music)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -94,5 +123,7 @@ namespace BatallaNaval
         private System.Windows.Forms.Button btn_jugar;
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TrackBar tb_volume;
+        private System.Windows.Forms.PictureBox pb_music;
     }
 }

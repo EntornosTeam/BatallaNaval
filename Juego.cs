@@ -62,7 +62,7 @@ namespace BatallaNaval
             PictureBox pb = sender as PictureBox;
             int [] casilla = tablero.ComprobarCasilla(pb.Tag.ToString());
 
-            MessageBox.Show((casilla[0] + "," + casilla[1]).ToString());
+            //MessageBox.Show((casilla[0] + "," + casilla[1]).ToString());
 
             if(casilla[1] == -1) // No ha sido tocado
             {
@@ -71,7 +71,7 @@ namespace BatallaNaval
                 {
                     estado = 0;
                     tablero.CambiarEstado(pb.Tag.ToString(), estado);
-                    MessageBox.Show("Ha tocado agua");
+                    // MessageBox.Show("Ha tocado agua");
                     //Restar número de disparos del jugador
                     jug.RestarNumDisparos();
                     MessageBox.Show(jug.NumeroDisparos.ToString());
@@ -89,7 +89,7 @@ namespace BatallaNaval
                     }
                     else
                     {
-                        MessageBox.Show("Ha tocado un barco");
+                        //MessageBox.Show("Ha tocado un barco");
                     }
                     pb.BackColor = Color.Red;
                     if (tablero.ComprobarVictoria())
@@ -116,7 +116,6 @@ namespace BatallaNaval
         }
         public void Ganar()
         {
-            MessageBox.Show("Has ganado bro");
             foreach (Control c in tabla.Controls)
             {
                 PictureBox pb = c as PictureBox;

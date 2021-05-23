@@ -75,6 +75,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tablero.cs" />
+    <Compile Include="Volume.cs" />
     <Compile Include="Win.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +146,12 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\note2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\note4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
