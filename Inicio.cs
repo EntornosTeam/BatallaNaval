@@ -14,7 +14,16 @@ namespace BatallaNaval
     {
         public Tablero tablero;
         public List<Barco> barcos;
-        public List<Bitmap> images = new List<Bitmap>();
+        public List<Bitmap> images = new List<Bitmap>() {
+            Properties.Resources.Fragata,
+            Properties.Resources.Crucero1, Properties.Resources.Crucero2,
+            Properties.Resources.Submarino1, Properties.Resources.Submarino2, Properties.Resources.Submarino3,
+            Properties.Resources.portaaviones1, Properties.Resources.portaaviones2, Properties.Resources.portaaviones3, Properties.Resources.portaaviones4};
+        public List<Bitmap> imagesv = new List<Bitmap>() {
+            Properties.Resources.Fragata,
+            Properties.Resources.Crucero1, Properties.Resources.Crucero2,
+            Properties.Resources.Submarino1, Properties.Resources.Submarino2, Properties.Resources.Submarino3,
+            Properties.Resources.portaaviones1, Properties.Resources.portaaviones2, Properties.Resources.portaaviones3, Properties.Resources.portaaviones4};
         public bool play = false;
         
         public Inicio()
@@ -24,6 +33,10 @@ namespace BatallaNaval
             CreateTablero();
             cb_posicion.SelectedIndex = 0;
             barcos = new List<Barco>();
+            foreach (Bitmap img in imagesv)
+            {
+                img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+            }
         }
 
         private void AssignTag()
@@ -35,6 +48,7 @@ namespace BatallaNaval
                 PictureBox pb = c as PictureBox;
                 if (pb != null)
                 {
+                    pb.SizeMode = PictureBoxSizeMode.Zoom;
                     pb.Tag = fila + "," + columna;
                     // fila++;
                     if (columna == 0)
@@ -64,6 +78,7 @@ namespace BatallaNaval
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
             if (listView1.SelectedItems.Count == 0)
             {
                 MessageBox.Show("Debes seleccionar un barco.");
@@ -74,6 +89,7 @@ namespace BatallaNaval
                 PictureBox pb = sender as PictureBox;
 
                 int numCasillas = int.Parse(listView1.SelectedItems[0].SubItems[1].Text.ToString());//4; //Número de casillas que ocupa el Barco.
+
 
                 int fila = int.Parse(pb.Tag.ToString().Split(',')[0]);
 
@@ -90,6 +106,8 @@ namespace BatallaNaval
                     //Aqui se abre el else de quitar los barcos.
 
                     //MessageBox.Show("Fila " + fila + " Columna " + columna);
+
+                    
 
                     if (cb_posicion.SelectedIndex == 0) //Indice 0 = a Horizontal, Indice 1 = Vertical.
                     {
@@ -114,33 +132,38 @@ namespace BatallaNaval
                             }
                             
                         }
+                        int imagenBarco = 0;
+                        
+                        if (numCasillas == 2)
+                        {
+                            imagenBarco = 1;
 
+                        }
+                        else if (numCasillas == 3)
+                        {
+                            imagenBarco = 3;
+                        }
+                        else if (numCasillas == 4)
+                        {
+                            imagenBarco = 6;
+                        }
+                        if (y == -1) 
+                        {
+                            imagenBarco = imagenBarco + (numCasillas - 1);
+                        }
+                        
                         for (int x = 0; x < numCasillas; x++) // bucle pintar
                         {
-
+                            
                             int filaActual = fila;
                             int columnaActual = columna + (x * y);
                             string tag = filaActual.ToString() + "," + columnaActual.ToString();
                             PictureBox pbPintar = ObtenerPictureBox(tag);
-                            if (numCasillas == 1)
-                            {
-                                // imagenFragata
-                            }
-                            else if (x == 0)
-                            {
-                                // imagenDelante
-                            }
-                            else if (x + 1 == numCasillas)
-                            {
-                                // imagenFin
-                            }
-                            else if (x > 1)
-                            {
-                                // imagenMedio
-                            }
-                            pbPintar.BackColor = ObtenerColor(numCasillas);
+                            pbPintar.Image = images[imagenBarco];
+                            //pbPintar.BackColor = ObtenerColor(numCasillas);
                             tablero.CambiarValorCasilla(tag, new int[] { id, -1 });
-
+                            imagenBarco = (y == -1)?imagenBarco-1:imagenBarco+1;
+                            
                         }
                         Barco barco = new Barco(numCasillas);
                         RestarNumeroBarcos();
@@ -168,32 +191,36 @@ namespace BatallaNaval
                                 return;
                             }
                         }
-                        // [imagenDelante, imagenMedio, imagenFin], [imagenFragata]
+                        
+                        int imagenBarco = 0;
+
+                        if (numCasillas == 2)
+                        {
+                            imagenBarco = 1;
+
+                        }
+                        else if (numCasillas == 3)
+                        {
+                            imagenBarco = 3;
+                        }
+                        else if (numCasillas == 4)
+                        {
+                            imagenBarco = 6;
+                        }
+                        if (x == -1)
+                        {
+                            imagenBarco = imagenBarco + (numCasillas - 1);
+                        }
                         for (int y = 0; y < numCasillas; y++) // bucle pintar
                         {
                             int filaActual = fila + (y * x);
                             int columnaActual = columna;
                             string tag = filaActual.ToString() + "," + columnaActual.ToString();
                             PictureBox pbPintar = ObtenerPictureBox(tag);
-
-                            if (numCasillas == 1)
-                            {
-                                // imagenFragata
-                            }
-                            else if (y == 0)
-                            {
-                                // imagenDelante
-                            }
-                            else if (y + 1 == numCasillas)
-                            {
-                                // imagenFin
-                            }
-                            else if (y > 1)
-                            {
-                                // imagenMedio
-                            }
-                            pbPintar.BackColor = ObtenerColor(numCasillas);
+                            pbPintar.Image = imagesv[imagenBarco];
+                            //pbPintar.BackColor = ObtenerColor(numCasillas);
                             tablero.CambiarValorCasilla(tag, new int[] { id, -1 });
+                            imagenBarco = (x == -1) ? imagenBarco - 1 : imagenBarco + 1;
                         }
                         Barco barco = new Barco(numCasillas);
                         RestarNumeroBarcos();
@@ -376,7 +403,7 @@ namespace BatallaNaval
 
             foreach(PictureBox casilla in casillas)
             {
-                casilla.BackColor = DefaultBackColor;
+                casilla.Image = null;
             }
 
             int barcoSize = casillas.Count();
