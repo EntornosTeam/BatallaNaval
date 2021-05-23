@@ -29,6 +29,7 @@ namespace BatallaNaval
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Win));
             this.btn_reintentar = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -40,7 +41,7 @@ namespace BatallaNaval
             this.btn_reintentar.BackColor = System.Drawing.Color.White;
             this.btn_reintentar.FlatAppearance.BorderSize = 0;
             this.btn_reintentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_reintentar.Font = new System.Drawing.Font("Pirate Ship", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reintentar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_reintentar.Location = new System.Drawing.Point(421, 367);
             this.btn_reintentar.Name = "btn_reintentar";
             this.btn_reintentar.Size = new System.Drawing.Size(236, 61);
@@ -56,7 +57,7 @@ namespace BatallaNaval
             this.btn_salir.BackColor = System.Drawing.Color.White;
             this.btn_salir.FlatAppearance.BorderSize = 0;
             this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_salir.Font = new System.Drawing.Font("Pirate Ship", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_salir.Location = new System.Drawing.Point(110, 367);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(236, 61);
@@ -86,6 +87,7 @@ namespace BatallaNaval
             this.ClientSize = new System.Drawing.Size(775, 482);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Win";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
