@@ -146,5 +146,35 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crucero1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crucero2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fragata.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portaaviones1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portaaviones2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portaaviones3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portaaviones4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Submarino1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Submarino2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Submarino3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
