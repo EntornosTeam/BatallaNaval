@@ -112,6 +112,7 @@ namespace BatallaNaval
 
         public void Perder()
         {
+            music.controls.stop();
             GameOver gameOver = new GameOver();
             gameOver.ShowDialog();
             replay = gameOver.replay;
@@ -127,6 +128,7 @@ namespace BatallaNaval
                     RemoveClickEvent(pb);
                 }
             }
+            music.controls.stop();
             Win win = new Win();
             win.ShowDialog();
             replay = win.replay;
@@ -167,11 +169,6 @@ namespace BatallaNaval
                     tb_volume.Value = 5;
                 }
             }
-        }
-
-        private void Juego_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            music.controls.stop();
         }
 
         private void Juego_Load(object sender, EventArgs e)

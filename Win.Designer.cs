@@ -106,6 +106,8 @@ namespace BatallaNaval
             this.Name = "Win";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Victoria!!!";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Win_FormClosing);
+            this.Load += new System.EventHandler(this.Win_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Win_Paint);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

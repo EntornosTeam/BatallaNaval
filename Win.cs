@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace BatallaNaval
 {
@@ -15,6 +16,7 @@ namespace BatallaNaval
     {
         public bool replay = false;
         PrivateFontCollection pFonts = new PrivateFontCollection();
+        WindowsMediaPlayer music = new WindowsMediaPlayer();
         public Win()
         {
             InitializeComponent();
@@ -55,6 +57,17 @@ namespace BatallaNaval
             Button btn = sender as Button;
             btn.BackColor = Color.White;
             btn.ForeColor = Color.Black;
+        }
+
+        private void Win_Load(object sender, EventArgs e)
+        {
+            music.URL = "Sounds/victory.mp3";
+            music.settings.volume = Volume.volumen;
+        }
+
+        private void Win_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            music.controls.stop();
         }
     }
 }
