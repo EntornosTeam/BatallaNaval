@@ -63,6 +63,36 @@ namespace BatallaNaval.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barco {
+            get {
+                object obj = ResourceManager.GetObject("barco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cannonball {
+            get {
+                object obj = ResourceManager.GetObject("cannonball", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cross {
+            get {
+                object obj = ResourceManager.GetObject("cross", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Crucero1 {
             get {
                 object obj = ResourceManager.GetObject("Crucero1", resourceCulture);
@@ -83,9 +113,9 @@ namespace BatallaNaval.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Fragata {
+        internal static System.Drawing.Bitmap fondo {
             get {
-                object obj = ResourceManager.GetObject("Fragata", resourceCulture);
+                object obj = ResourceManager.GetObject("fondo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +123,9 @@ namespace BatallaNaval.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap barco {
+        internal static System.Drawing.Bitmap Fragata {
             get {
-                object obj = ResourceManager.GetObject("barco", resourceCulture);
+                object obj = ResourceManager.GetObject("Fragata", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +226,16 @@ namespace BatallaNaval.Properties {
         internal static System.Drawing.Bitmap Submarino3 {
             get {
                 object obj = ResourceManager.GetObject("Submarino3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap water {
+            get {
+                object obj = ResourceManager.GetObject("water", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

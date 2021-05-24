@@ -186,5 +186,17 @@
   <ItemGroup>
     <None Include="Images\barco.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cannonball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\water.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
