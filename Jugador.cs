@@ -8,6 +8,7 @@ namespace BatallaNaval
     public class Jugador
     {
         private int numeroDisparos;
+        const int MAX_DISPAROS = 21;
 
         public Jugador()
         {
@@ -22,6 +23,18 @@ namespace BatallaNaval
         public void RestarNumDisparos()
         {
             this.numeroDisparos--;
+        }
+
+        public void RecuperarDisparos()
+        {
+            if (MAX_DISPAROS < numeroDisparos + 2)
+            {
+                numeroDisparos = MAX_DISPAROS;
+            } 
+            else
+            {
+                this.numeroDisparos += 2;
+            }
         }
     }
 }

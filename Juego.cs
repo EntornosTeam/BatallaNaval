@@ -23,14 +23,15 @@ namespace BatallaNaval
 
         public Juego(TableLayoutPanel tabla, Tablero tablero, List<Barco> barcos)
         {
+            InitializeComponent();
             Controls.Add(tabla);
             foreach (Control c in tabla.Controls)
             {
                 PictureBox pb = c as PictureBox;
                 if (pb != null)
                 {
-                    pb.BackColor = default;
-                    pb.Image = null;
+
+                    pb.Image = Properties.Resources.fondo;
                     RemoveClickEvent(pb);
                     pb.Click += new System.EventHandler(pictureBox1_Click);
                 }
@@ -39,7 +40,7 @@ namespace BatallaNaval
             this.tabla = tabla;
             this.tablero = tablero;
             this.barcos = barcos;
-            InitializeComponent();
+            ActualizarIntentos();
         }
 
         /// <summary>
@@ -60,10 +61,31 @@ namespace BatallaNaval
         }
 
 
+        private void ActualizarIntentos()
+        {
+            int i = 0;
+            foreach (Control c in flp_intentos.Controls)
+            {
+                PictureBox pb = c as PictureBox;
+                if (pb != null)
+                {
+                    if (i < jug.NumeroDisparos)
+                    {
+                        pb.Image = Properties.Resources.cannonball;
+                    }
+                    else
+                    {
+                        pb.Image = null;
+                    }
+                    i++;
+                }
+            }
+        }
+
         private void pictureBox1_Click(Object sender, EventArgs e)
         {
             PictureBox pb = sender as PictureBox;
-            int [] casilla = tablero.ComprobarCasilla(pb.Tag.ToString());
+            int[] casilla = tablero.ComprobarCasilla(pb.Tag.ToString());
 
             //MessageBox.Show((casilla[0] + "," + casilla[1]).ToString());
 
@@ -77,8 +99,7 @@ namespace BatallaNaval
                     // MessageBox.Show("Ha tocado agua");
                     //Restar número de disparos del jugador
                     jug.RestarNumDisparos();
-                    MessageBox.Show(jug.NumeroDisparos.ToString());
-                    pb.BackColor = Color.Blue;
+                    pb.Image = Properties.Resources.water;
                     if (jug.NumeroDisparos == 0) Perder();
                 }
                 else // Ha tocado barco
@@ -88,13 +109,27 @@ namespace BatallaNaval
                     estado = tablero.ComprobarTocadoHundido(casilla[0])?2:1;
                     if(estado == 2)
                     {
-                        MessageBox.Show("Tocado y Hundido");
+                        int barcoId = tablero.ComprobarCasilla(pb.Tag.ToString())[0];
+                        foreach (Control c in tabla.Controls)
+                        {
+                            PictureBox pbComprobar = c as PictureBox;
+                            if (pbComprobar != null)
+                            {
+                                if (tablero.ComprobarCasilla(pbComprobar.Tag.ToString())[0] == barcoId)
+                                {
+                                    pbComprobar.Image = null;
+                                }
+                            }
+                        }
+                        jug.RecuperarDisparos();
+                        pb.Image = null;
                     }
                     else
                     {
                         //MessageBox.Show("Ha tocado un barco");
+                        pb.Image = Properties.Resources.cross;
+
                     }
-                    pb.BackColor = Color.Red;
                     if (tablero.ComprobarVictoria())
                     {
                         Ganar();
@@ -107,11 +142,12 @@ namespace BatallaNaval
             {
                 MessageBox.Show("Esta casilla ya ha sido tocada");
             }
-
+            ActualizarIntentos();
         }
 
         public void Perder()
         {
+            ActualizarIntentos();
             GameOver gameOver = new GameOver();
             gameOver.ShowDialog();
             replay = gameOver.replay;
@@ -119,6 +155,7 @@ namespace BatallaNaval
         }
         public void Ganar()
         {
+            ActualizarIntentos();
             foreach (Control c in tabla.Controls)
             {
                 PictureBox pb = c as PictureBox;

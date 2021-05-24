@@ -51,8 +51,8 @@ namespace BatallaNaval
                 if (pb != null)
                 {
                     pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pb.BackgroundImageLayout = ImageLayout.Stretch;
                     pb.Tag = fila + "," + columna;
-                    // fila++;
                     if (columna == 0)
                     {
                         columna = 9;
@@ -105,20 +105,12 @@ namespace BatallaNaval
                 }
                 else
                 {
-
-                    //Aqui se abre el else de quitar los barcos.
-
-                    //MessageBox.Show("Fila " + fila + " Columna " + columna);
-
-                    
-
                     if (cb_posicion.SelectedIndex == 0) //Indice 0 = a Horizontal, Indice 1 = Vertical.
                     {
                         int y = 1; // si es 1, va a la derecha, si es -1, va a la izquierda
                         if ((columna - 1) + numCasillas > 9)
                         {
                             y = -1;
-                            // MessageBox.Show("No se puede poner el barco");
                         }
                         int id = Barco.lastId + 1;
                         if (!ComprobarBarco(numCasillas)) return;
@@ -162,7 +154,7 @@ namespace BatallaNaval
                             int columnaActual = columna + (x * y);
                             string tag = filaActual.ToString() + "," + columnaActual.ToString();
                             PictureBox pbPintar = ObtenerPictureBox(tag);
-                            pbPintar.Image = images[imagenBarco];
+                            pbPintar.BackgroundImage = images[imagenBarco];
                             //pbPintar.BackColor = ObtenerColor(numCasillas);
                             tablero.CambiarValorCasilla(tag, new int[] { id, -1 });
                             imagenBarco = (y == -1)?imagenBarco-1:imagenBarco+1;
@@ -220,7 +212,7 @@ namespace BatallaNaval
                             int columnaActual = columna;
                             string tag = filaActual.ToString() + "," + columnaActual.ToString();
                             PictureBox pbPintar = ObtenerPictureBox(tag);
-                            pbPintar.Image = imagesv[imagenBarco];
+                            pbPintar.BackgroundImage = imagesv[imagenBarco];
                             //pbPintar.BackColor = ObtenerColor(numCasillas);
                             tablero.CambiarValorCasilla(tag, new int[] { id, -1 });
                             imagenBarco = (x == -1) ? imagenBarco - 1 : imagenBarco + 1;
@@ -406,7 +398,7 @@ namespace BatallaNaval
 
             foreach(PictureBox casilla in casillas)
             {
-                casilla.Image = null;
+                casilla.BackgroundImage = null;
             }
 
             int barcoSize = casillas.Count();
