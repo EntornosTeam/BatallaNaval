@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,6 +28,10 @@ namespace BatallaNaval
             Properties.Resources.portaaviones1, Properties.Resources.portaaviones2, Properties.Resources.portaaviones3, Properties.Resources.portaaviones4};
         public bool play = false;
         WindowsMediaPlayer music = new WindowsMediaPlayer();
+        SoundPlayer cambioTipo = new SoundPlayer("Sounds/mouse_over.wav");
+        SoundPlayer ponerBarco = new SoundPlayer("Sounds/poner_barco.wav");
+        SoundPlayer quitarBarco = new SoundPlayer("Sounds/quitar_barco.wav");
+        SoundPlayer error = new SoundPlayer("Sounds/error.wav");
 
         public Inicio()
         {
@@ -84,6 +89,7 @@ namespace BatallaNaval
 
             if (listView1.SelectedItems.Count == 0)
             {
+                error.Play();
                 MessageBox.Show("Debes seleccionar un barco.");
             }
             else
@@ -98,13 +104,14 @@ namespace BatallaNaval
 
                 int columna = int.Parse(pb.Tag.ToString().Split(',')[1]);
 
-               if (tablero.ComprobarCasilla(fila + "," + columna)[0] != -1/* && tablero.ComprobarCasilla(fila + "," + columna)[0] == listView1.SelectedItems[0]*/)
+                if (tablero.ComprobarCasilla(fila + "," + columna)[0] != -1/* && tablero.ComprobarCasilla(fila + "," + columna)[0] == listView1.SelectedItems[0]*/)
                 {
                     int idBarco = tablero.ComprobarCasilla(fila + "," + columna)[0];
                     EliminaBarco(idBarco);
                 }
                 else
                 {
+                    // area trabajo
                     if (cb_posicion.SelectedIndex == 0) //Indice 0 = a Horizontal, Indice 1 = Vertical.
                     {
                         int y = 1; // si es 1, va a la derecha, si es -1, va a la izquierda
@@ -122,6 +129,7 @@ namespace BatallaNaval
                             string tag = filaActual.ToString() + "," + columnaActual.ToString();
                             if (tablero.ComprobarCasilla(tag)[0] != -1)
                             {
+                                error.Play();
                                 MessageBox.Show("Ya hay un barco en esa casilla");
                                 return;
                             }
@@ -163,6 +171,7 @@ namespace BatallaNaval
                         Barco barco = new Barco(numCasillas);
                         RestarNumeroBarcos();
                         barcos.Add(barco);
+                        ponerBarco.Play();
                         PoderEmpezar();
                         
                     }
@@ -219,10 +228,11 @@ namespace BatallaNaval
                         }
                         Barco barco = new Barco(numCasillas);
                         RestarNumeroBarcos();
-                        barcos.Add(barco);          
+                        barcos.Add(barco);
+                        ponerBarco.Play();
                         PoderEmpezar();
                     }
-
+                    // area trabajo
                 }
                 //Aquí se cierra el else de borrar los barcos.
             }
@@ -279,31 +289,6 @@ namespace BatallaNaval
                 listView1.Items[3].SubItems[2].ForeColor = Color.Black;
             }
         }
-        private Color ObtenerColor(int num_casillas)
-        {
-            Color color = default;
-
-            //Hacemos un switch de ese número de casillas, dependiendo de el número de casillas retornará un color u otro.
-            switch(num_casillas)
-            {
-                case 1:
-                    color = Color.Blue;
-                    break;
-                case 2:
-                    color = Color.Green;
-                    break;
-                case 3:
-                    color = Color.Yellow;
-                    break;
-                case 4:
-                    color = Color.Red;
-                    break;
-                default:
-                    throw new Exception("Número de casillas no válidas");
-            }
-
-            return color;
-        }
 
         private PictureBox ObtenerPictureBox(String coordenadas)
         {
@@ -315,64 +300,56 @@ namespace BatallaNaval
                     if (pb.Tag.Equals(coordenadas)) return pb;
                 }
             }
-            //mes
             MessageBox.Show("No pilla coordenada");
             return null;
         }
         private void listView1_ColumnWidthChanging_1(object sender, ColumnWidthChangingEventArgs e)
         {
-            e.NewWidth = this.listView1.Columns[e.ColumnIndex].Width;
+            e.NewWidth = listView1.Columns[e.ColumnIndex].Width;
             e.Cancel = true;
         }
 
         private bool ComprobarBarco(int size)
         {
-           /* if (Barco.lastId + 1 > Barco.MAXID)
+            error.Play();
+            switch (size)
             {
-                MessageBox.Show("Se ha excedido el número máximo de barcos");
-                return false;
-            }*/
-            /*else 
-            {*/
-                switch (size)
-                {
-                    case 1:
-                        if (Barco.numFragatas + 1 > Barco.MAXFRAGATAS)
-                        {
-                            MessageBox.Show("Se ha excedido el número máximo de fragatas.");
-                            return false;
-                        }
-                        break;
-                    case 2:
-                        if (Barco.numDestructores + 1 > Barco.MAXDESTRUCTORES)
-                        {
-                            MessageBox.Show("Se ha excedido el número máximo de destructores.");
-                            return false;
-                        }
-
-                        break;
-                    case 3:
-                        if (Barco.numSubmarinos + 1 > Barco.MAXSUBMARINOS)
-                        {
-                            MessageBox.Show("Se ha excedido el número máximo de submarinos.");
-                            return false;
-                        }
-
-                        break;
-                    case 4:
-                        if (Barco.numPortaaviones + 1 > Barco.MAXPORTAAVIONES)
-                        {
-                            MessageBox.Show("Se ha excedido el número máximo de portaaviones.");
-                            return false;
-                        }
-
-                        break;
-                    default:
-                        MessageBox.Show("El tamaño es incorrecto.");
+                case 1:
+                    if (Barco.numFragatas + 1 > Barco.MAXFRAGATAS)
+                    {
+                        MessageBox.Show("Se ha excedido el número máximo de fragatas.");
                         return false;
-                }
-                return true;
-            //}
+                    }
+                    break;
+                case 2:
+                    if (Barco.numDestructores + 1 > Barco.MAXDESTRUCTORES)
+                    {
+                        MessageBox.Show("Se ha excedido el número máximo de destructores.");
+                        return false;
+                    }
+
+                    break;
+                case 3:
+                    if (Barco.numSubmarinos + 1 > Barco.MAXSUBMARINOS)
+                    {
+                        MessageBox.Show("Se ha excedido el número máximo de submarinos.");
+                        return false;
+                    }
+
+                    break;
+                case 4:
+                    if (Barco.numPortaaviones + 1 > Barco.MAXPORTAAVIONES)
+                    {
+                        MessageBox.Show("Se ha excedido el número máximo de portaaviones.");
+                        return false;
+                    }
+
+                    break;
+                default:
+                    MessageBox.Show("El tamaño es incorrecto.");
+                    return false;
+            }
+            return true;
         }
 
         private void EliminaBarco(int id)
@@ -431,6 +408,7 @@ namespace BatallaNaval
 
             }
             barcos.Remove(barco);
+            quitarBarco.Play();
             PoderEmpezar();
         }
 
@@ -490,6 +468,11 @@ namespace BatallaNaval
         private void Inicio_FormClosing(object sender, FormClosingEventArgs e)
         {
             music.controls.stop();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cambioTipo.Play();
         }
     }
 }
