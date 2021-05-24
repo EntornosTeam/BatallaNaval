@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Media;
@@ -17,13 +18,17 @@ namespace BatallaNaval
     public partial class Menu : Form
     {
         WindowsMediaPlayer music = new WindowsMediaPlayer();
-        
+        PrivateFontCollection pFonts = new PrivateFontCollection();
 
 
         public bool startGame = false;
         public Menu()
         {
             InitializeComponent();
+            pFonts.AddFontFile("../../Fonts/Pirate Ship.ttf");
+            lbl_hundir.Font = new Font(pFonts.Families[0], 53, FontStyle.Bold);
+            btn_salir.Font = new Font(pFonts.Families[0], 12, FontStyle.Regular);
+            btn_jugar.Font = new Font(pFonts.Families[0], 12, FontStyle.Regular);
         }
 
         private void btn_jugar_Click(object sender, EventArgs e)
@@ -80,6 +85,20 @@ namespace BatallaNaval
         private void Menu_FormClosing(object sender, FormClosingEventArgs e)
         {
             music.controls.stop();
+        }
+
+        private void btn_MouseEnter(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            btn.BackColor = Color.Black;
+            btn.ForeColor = Color.White;
+        }
+
+        private void btn_MouseLeave(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            btn.BackColor = Color.White;
+            btn.ForeColor = Color.Black;
         }
     }
 }
