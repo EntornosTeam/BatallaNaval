@@ -73,8 +73,8 @@ namespace BatallaNaval
             this.btn_reintentar.Text = "Volver al menu";
             this.btn_reintentar.UseVisualStyleBackColor = false;
             this.btn_reintentar.Click += new System.EventHandler(this.btn_reintentar_Click);
-            this.btn_reintentar.MouseEnter += new System.EventHandler(this.btn_salir_MouseEnter);
-            this.btn_reintentar.MouseLeave += new System.EventHandler(this.btn_salir_MouseLeave);
+            this.btn_reintentar.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
+            this.btn_reintentar.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
             // btn_salir
             // 
@@ -89,8 +89,8 @@ namespace BatallaNaval
             this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = false;
             this.btn_salir.Click += new System.EventHandler(this.button1_Click);
-            this.btn_salir.MouseEnter += new System.EventHandler(this.btn_salir_MouseEnter);
-            this.btn_salir.MouseLeave += new System.EventHandler(this.btn_salir_MouseLeave);
+            this.btn_salir.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
+            this.btn_salir.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
             // GameOver
             // 
@@ -106,6 +106,8 @@ namespace BatallaNaval
             this.Name = "GameOver";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Has perdido";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameOver_FormClosing);
+            this.Load += new System.EventHandler(this.GameOver_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.GameOver_Paint);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

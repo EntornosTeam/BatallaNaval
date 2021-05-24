@@ -123,7 +123,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Fonts\" />
-    <Folder Include="Sounds\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\mar.jpg" />

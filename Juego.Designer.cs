@@ -330,7 +330,6 @@ namespace BatallaNaval
             this.MaximizeBox = false;
             this.Name = "Juego";
             this.Text = "Juego";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Juego_FormClosing);
             this.Load += new System.EventHandler(this.Juego_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tb_volume)).EndInit();
             this.flp_intentos.ResumeLayout(false);

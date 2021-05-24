@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace BatallaNaval
 {
@@ -16,6 +17,7 @@ namespace BatallaNaval
 
         PrivateFontCollection pFonts = new PrivateFontCollection();
         public bool replay = false;
+        WindowsMediaPlayer music = new WindowsMediaPlayer();
 
         public GameOver()
         {
@@ -45,18 +47,29 @@ namespace BatallaNaval
             btn_reintentar.Font = new Font(pFonts.Families[1], 12, FontStyle.Regular);
         }
 
-        private void btn_salir_MouseEnter(object sender, EventArgs e)
+        private void btn_MouseEnter(object sender, EventArgs e)
         {
             Button btn = sender as Button;
             btn.BackColor = Color.Black;
             btn.ForeColor = Color.White;
         }
 
-        private void btn_salir_MouseLeave(object sender, EventArgs e)
+        private void btn_MouseLeave(object sender, EventArgs e)
         {
             Button btn = sender as Button;
             btn.BackColor = Color.White;
             btn.ForeColor = Color.Black;
+        }
+
+        private void GameOver_Load(object sender, EventArgs e)
+        {
+            music.URL = "Sounds/defeat.mp3";
+            music.settings.volume = Volume.volumen;
+        }
+
+        private void GameOver_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            music.controls.stop();
         }
     }
 }
