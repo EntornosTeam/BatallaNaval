@@ -370,5 +370,10 @@ namespace BatallaNaval
         {
             cambioTipo.Play();
         }
+
+        private void btn_comenzar_MouseEnter(object sender, EventArgs e)
+        {
+            cambioTipo.Play();
+        }
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,9 @@ namespace BatallaNaval
         Jugador jug = new Jugador();
         public bool replay = false;
         WindowsMediaPlayer music = new WindowsMediaPlayer();
+        SoundPlayer disparo_agua = new SoundPlayer("Sounds/disparo_agua.wav");
+        SoundPlayer sonidoTocado = new SoundPlayer("Sounds/explosion1.wav");
+        SoundPlayer sonidoHundido = new SoundPlayer("Sounds/explosion2.wav");
 
         public Juego(TableLayoutPanel tabla, Tablero tablero, List<Barco> barcos)
         {
@@ -96,8 +100,7 @@ namespace BatallaNaval
                 {
                     estado = 0;
                     tablero.CambiarEstado(pb.Tag.ToString(), estado);
-                    // MessageBox.Show("Ha tocado agua");
-                    //Restar número de disparos del jugador
+                    disparo_agua.Play();
                     jug.RestarNumDisparos();
                     pb.Image = Properties.Resources.water;
                     if (jug.NumeroDisparos == 0) Perder();
@@ -107,7 +110,7 @@ namespace BatallaNaval
                     estado = 1;
                     tablero.CambiarEstado(pb.Tag.ToString(), estado);
                     estado = tablero.ComprobarTocadoHundido(casilla[0])?2:1;
-                    if(estado == 2)
+                    if(estado == 2) //Barco Hundido
                     {
                         int barcoId = tablero.ComprobarCasilla(pb.Tag.ToString())[0];
                         foreach (Control c in tabla.Controls)
@@ -121,12 +124,13 @@ namespace BatallaNaval
                                 }
                             }
                         }
+                        sonidoHundido.Play();
                         jug.RecuperarDisparos();
                         pb.Image = null;
                     }
-                    else
+                    else //Barco tocado
                     {
-                        //MessageBox.Show("Ha tocado un barco");
+                        sonidoTocado.Play();
                         pb.Image = Properties.Resources.cross;
 
                     }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,7 @@ namespace BatallaNaval
         public bool replay = false;
         PrivateFontCollection pFonts = new PrivateFontCollection();
         WindowsMediaPlayer music = new WindowsMediaPlayer();
+        SoundPlayer sonidoMouse = new SoundPlayer("Sounds/mouse_over.wav");
         public Win()
         {
             InitializeComponent();
@@ -45,14 +47,15 @@ namespace BatallaNaval
             lbl_victoria.Font = new Font(pFonts.Families[0], 70, FontStyle.Regular);
         }
 
-        private void btn_salir_MouseEnter(object sender, EventArgs e)
+        private void btn_MouseEnter(object sender, EventArgs e)
         {
+            sonidoMouse.Play();
             Button btn = sender as Button;
             btn.BackColor = Color.Black;
             btn.ForeColor = Color.White;
         }
 
-        private void btn_salir_MouseLeave(object sender, EventArgs e)
+        private void btn_MouseLeave(object sender, EventArgs e)
         {
             Button btn = sender as Button;
             btn.BackColor = Color.White;

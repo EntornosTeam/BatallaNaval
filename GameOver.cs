@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +19,7 @@ namespace BatallaNaval
         PrivateFontCollection pFonts = new PrivateFontCollection();
         public bool replay = false;
         WindowsMediaPlayer music = new WindowsMediaPlayer();
+        SoundPlayer sonidoMouse = new SoundPlayer("Sounds/mouse_over.wav");
 
         public GameOver()
         {
@@ -49,6 +51,7 @@ namespace BatallaNaval
 
         private void btn_MouseEnter(object sender, EventArgs e)
         {
+            sonidoMouse.Play(); 
             Button btn = sender as Button;
             btn.BackColor = Color.Black;
             btn.ForeColor = Color.White;

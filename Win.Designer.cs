@@ -40,6 +40,7 @@ namespace BatallaNaval
             // btn_reintentar
             // 
             this.btn_reintentar.BackColor = System.Drawing.Color.White;
+            this.btn_reintentar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_reintentar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_reintentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_reintentar.Font = new System.Drawing.Font("Pirate Ship", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -50,12 +51,13 @@ namespace BatallaNaval
             this.btn_reintentar.Text = "Volver al menu";
             this.btn_reintentar.UseVisualStyleBackColor = false;
             this.btn_reintentar.Click += new System.EventHandler(this.btn_reintentar_Click);
-            this.btn_reintentar.MouseEnter += new System.EventHandler(this.btn_salir_MouseEnter);
-            this.btn_reintentar.MouseLeave += new System.EventHandler(this.btn_salir_MouseLeave);
+            this.btn_reintentar.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
+            this.btn_reintentar.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
             // btn_salir
             // 
             this.btn_salir.BackColor = System.Drawing.Color.White;
+            this.btn_salir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_salir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salir.Font = new System.Drawing.Font("Pirate Ship", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -66,8 +68,8 @@ namespace BatallaNaval
             this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = false;
             this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
-            this.btn_salir.MouseEnter += new System.EventHandler(this.btn_salir_MouseEnter);
-            this.btn_salir.MouseLeave += new System.EventHandler(this.btn_salir_MouseLeave);
+            this.btn_salir.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
+            this.btn_salir.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
             // panel1
             // 

@@ -19,6 +19,7 @@ namespace BatallaNaval
     {
         WindowsMediaPlayer music = new WindowsMediaPlayer();
         PrivateFontCollection pFonts = new PrivateFontCollection();
+        SoundPlayer sonidoMouse = new SoundPlayer("Sounds/mouse_over.wav");
 
 
         public bool startGame = false;
@@ -89,6 +90,7 @@ namespace BatallaNaval
 
         private void btn_MouseEnter(object sender, EventArgs e)
         {
+            sonidoMouse.Play();
             Button btn = sender as Button;
             btn.BackColor = Color.Black;
             btn.ForeColor = Color.White;

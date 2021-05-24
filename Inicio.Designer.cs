@@ -284,6 +284,7 @@ namespace BatallaNaval
             // 
             // btn_comenzar
             // 
+            this.btn_comenzar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_comenzar.Enabled = false;
             this.btn_comenzar.Location = new System.Drawing.Point(356, 576);
             this.btn_comenzar.Name = "btn_comenzar";
@@ -292,6 +293,7 @@ namespace BatallaNaval
             this.btn_comenzar.Text = "Comenzar Juego";
             this.btn_comenzar.UseVisualStyleBackColor = true;
             this.btn_comenzar.Click += new System.EventHandler(this.btn_comenzar_Click);
+            this.btn_comenzar.MouseEnter += new System.EventHandler(this.btn_comenzar_MouseEnter);
             // 
             // tableLayoutPanel1
             // 
