@@ -93,9 +93,9 @@ namespace BatallaNaval.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap barco {
+        internal static System.Drawing.Bitmap barco2 {
             get {
-                object obj = ResourceManager.GetObject("barco", resourceCulture);
+                object obj = ResourceManager.GetObject("barco2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
