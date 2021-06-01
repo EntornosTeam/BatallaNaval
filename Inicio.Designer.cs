@@ -2060,6 +2060,7 @@ namespace BatallaNaval
             this.cb_posicion.Name = "cb_posicion";
             this.cb_posicion.Size = new System.Drawing.Size(283, 28);
             this.cb_posicion.TabIndex = 4;
+            this.cb_posicion.SelectedIndexChanged += new System.EventHandler(this.cb_posicion_SelectedIndexChanged);
             // 
             // label22
             // 

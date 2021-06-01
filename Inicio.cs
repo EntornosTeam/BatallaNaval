@@ -117,7 +117,7 @@ namespace BatallaNaval
                 {
                     bool horizontal = cb_posicion.SelectedIndex == 0;
                     int d = ((columna - 1) + numCasillas > 9)?-1:1; // si es 1, va a la derecha, si es -1, va a la izquierda
-                    // if hover barco
+                    bool otroLadoProbado = false;
                     int id = Barco.lastId + 1;
                     if (!ComprobarBarco(numCasillas)) return;
 
@@ -126,11 +126,26 @@ namespace BatallaNaval
                         int filaActual = (horizontal) ? fila : fila + (x * d); // desplazamiento vertical
                         int columnaActual = (horizontal) ? columna + (x * d) : columna; // desplazamiento horizontal
                         string tag = filaActual.ToString() + "," + columnaActual.ToString();
-                        if (tablero.ComprobarCasilla(tag)[0] != -1)
+                        if (filaActual < 0 || columnaActual < 0) // Se sale por la izquierda
                         {
                             error.Play();
-                            MessageBox.Show("Ya hay un barco en esa casilla");
+                            MessageBox.Show("No cabe el barco en la casilla seleccionada!");
                             return;
+                        }
+                        if (tablero.ComprobarCasilla(tag)[0] != -1) // Se encuentra un barco
+                        {
+                            if (!otroLadoProbado && d != -1) // primer barco
+                            {
+                                otroLadoProbado = true;
+                                x = 0;
+                                d = -1;
+                            } 
+                            else
+                            {
+                                error.Play();
+                                MessageBox.Show("No cabe el barco en la casilla seleccionada!");
+                                return;
+                            }
                         }
                             
                     }
@@ -387,6 +402,11 @@ namespace BatallaNaval
         {
             btn_comenzar.BackColor = Color.White;
             btn_comenzar.ForeColor = Color.Black;
+        }
+
+        private void cb_posicion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cambioTipo.Play();
         }
     }
 }
