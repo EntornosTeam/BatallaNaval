@@ -106,7 +106,7 @@ namespace BatallaNaval
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "GameOver";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Has perdido";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameOver_FormClosing);
             this.Load += new System.EventHandler(this.GameOver_Load);

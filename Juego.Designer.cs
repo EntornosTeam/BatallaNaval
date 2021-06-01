@@ -47,13 +47,13 @@ namespace BatallaNaval
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pb_music = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.pb_music = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.tb_volume)).BeginInit();
             this.flp_intentos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,17 +71,18 @@ namespace BatallaNaval
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_music)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_music)).BeginInit();
             this.SuspendLayout();
             // 
             // tb_volume
             // 
+            this.tb_volume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(65)))), ((int)(((byte)(152)))));
             this.tb_volume.Location = new System.Drawing.Point(45, 558);
             this.tb_volume.Name = "tb_volume";
             this.tb_volume.Size = new System.Drawing.Size(104, 45);
@@ -90,6 +91,7 @@ namespace BatallaNaval
             // 
             // flp_intentos
             // 
+            this.flp_intentos.BackColor = System.Drawing.Color.Transparent;
             this.flp_intentos.Controls.Add(this.pictureBox1);
             this.flp_intentos.Controls.Add(this.pictureBox2);
             this.flp_intentos.Controls.Add(this.pictureBox3);
@@ -251,17 +253,6 @@ namespace BatallaNaval
             this.pictureBox15.TabIndex = 14;
             this.pictureBox15.TabStop = false;
             // 
-            // pb_music
-            // 
-            this.pb_music.Image = global::BatallaNaval.Properties.Resources.note2;
-            this.pb_music.Location = new System.Drawing.Point(11, 544);
-            this.pb_music.Name = "pb_music";
-            this.pb_music.Size = new System.Drawing.Size(28, 50);
-            this.pb_music.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_music.TabIndex = 10;
-            this.pb_music.TabStop = false;
-            this.pb_music.Click += new System.EventHandler(this.pb_music_Click);
-            // 
             // pictureBox16
             // 
             this.pictureBox16.Location = new System.Drawing.Point(3, 333);
@@ -316,11 +307,25 @@ namespace BatallaNaval
             this.pictureBox21.TabIndex = 20;
             this.pictureBox21.TabStop = false;
             // 
+            // pb_music
+            // 
+            this.pb_music.BackColor = System.Drawing.Color.Transparent;
+            this.pb_music.Image = global::BatallaNaval.Properties.Resources.note2;
+            this.pb_music.Location = new System.Drawing.Point(11, 544);
+            this.pb_music.Name = "pb_music";
+            this.pb_music.Size = new System.Drawing.Size(28, 50);
+            this.pb_music.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_music.TabIndex = 10;
+            this.pb_music.TabStop = false;
+            this.pb_music.Click += new System.EventHandler(this.pb_music_Click);
+            // 
             // Juego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
+            this.BackgroundImage = global::BatallaNaval.Properties.Resources.fondo_juego;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(998, 645);
             this.Controls.Add(this.flp_intentos);
             this.Controls.Add(this.pb_music);
@@ -329,6 +334,7 @@ namespace BatallaNaval
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Juego";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Juego";
             this.Load += new System.EventHandler(this.Juego_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tb_volume)).EndInit();
@@ -348,13 +354,13 @@ namespace BatallaNaval
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_music)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_music)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

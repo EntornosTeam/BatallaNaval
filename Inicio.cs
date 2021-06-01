@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -32,10 +33,12 @@ namespace BatallaNaval
         SoundPlayer ponerBarco = new SoundPlayer("Sounds/poner_barco.wav");
         SoundPlayer quitarBarco = new SoundPlayer("Sounds/quitar_barco.wav");
         SoundPlayer error = new SoundPlayer("Sounds/error.wav");
+        PrivateFontCollection pFonts = new PrivateFontCollection();
 
         public Inicio()
         {
             InitializeComponent();
+            pFonts.AddFontFile("../../Fonts/Pirate Ship.ttf");
             AssignTag();
             CreateTablero();
             cb_posicion.SelectedIndex = 0;
@@ -44,6 +47,7 @@ namespace BatallaNaval
             {
                 img.RotateFlip(RotateFlipType.Rotate90FlipNone);
             }
+            btn_comenzar.Font = new Font(pFonts.Families[0], 12, FontStyle.Regular);
         }
 
         private void AssignTag()
@@ -113,6 +117,7 @@ namespace BatallaNaval
                 {
                     bool horizontal = cb_posicion.SelectedIndex == 0;
                     int d = ((columna - 1) + numCasillas > 9)?-1:1; // si es 1, va a la derecha, si es -1, va a la izquierda
+                    // if hover barco
                     int id = Barco.lastId + 1;
                     if (!ComprobarBarco(numCasillas)) return;
 
@@ -154,7 +159,7 @@ namespace BatallaNaval
                         pbPintar.BackgroundImage = (horizontal)?images[imagenBarco]:imagesv[imagenBarco];
                         //pbPintar.BackColor = ObtenerColor(numCasillas);
                         tablero.CambiarValorCasilla(tag, new int[] { id, -1 });
-                        imagenBarco = (d == -1)?imagenBarco-1:imagenBarco+1;
+                        imagenBarco = (d == -1) ? imagenBarco-1 : imagenBarco+1;
                             
                     }
                     Barco barco = new Barco(numCasillas);
@@ -374,6 +379,14 @@ namespace BatallaNaval
         private void btn_comenzar_MouseEnter(object sender, EventArgs e)
         {
             cambioTipo.Play();
+            btn_comenzar.BackColor = Color.Black;
+            btn_comenzar.ForeColor = Color.White;
+        }
+
+        private void btn_comenzar_MouseLeave(object sender, EventArgs e)
+        {
+            btn_comenzar.BackColor = Color.White;
+            btn_comenzar.ForeColor = Color.Black;
         }
     }
 }

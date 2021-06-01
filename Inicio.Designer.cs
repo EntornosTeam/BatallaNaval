@@ -284,19 +284,26 @@ namespace BatallaNaval
             // 
             // btn_comenzar
             // 
+            this.btn_comenzar.BackColor = System.Drawing.Color.White;
             this.btn_comenzar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_comenzar.Enabled = false;
+            this.btn_comenzar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_comenzar.FlatAppearance.BorderSize = 0;
+            this.btn_comenzar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_comenzar.ForeColor = System.Drawing.Color.Black;
             this.btn_comenzar.Location = new System.Drawing.Point(356, 576);
             this.btn_comenzar.Name = "btn_comenzar";
             this.btn_comenzar.Size = new System.Drawing.Size(481, 46);
             this.btn_comenzar.TabIndex = 2;
             this.btn_comenzar.Text = "Comenzar Juego";
-            this.btn_comenzar.UseVisualStyleBackColor = true;
+            this.btn_comenzar.UseVisualStyleBackColor = false;
             this.btn_comenzar.Click += new System.EventHandler(this.btn_comenzar_Click);
             this.btn_comenzar.MouseEnter += new System.EventHandler(this.btn_comenzar_MouseEnter);
+            this.btn_comenzar.MouseLeave += new System.EventHandler(this.btn_comenzar_MouseLeave);
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 11;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
@@ -450,6 +457,7 @@ namespace BatallaNaval
             // 
             // pictureBox100
             // 
+            this.pictureBox100.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox100.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox100.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox100.Location = new System.Drawing.Point(481, 499);
@@ -462,6 +470,7 @@ namespace BatallaNaval
             // 
             // pictureBox99
             // 
+            this.pictureBox99.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox99.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox99.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox99.Location = new System.Drawing.Point(433, 499);
@@ -474,6 +483,7 @@ namespace BatallaNaval
             // 
             // pictureBox98
             // 
+            this.pictureBox98.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox98.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox98.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox98.Location = new System.Drawing.Point(385, 499);
@@ -486,6 +496,7 @@ namespace BatallaNaval
             // 
             // pictureBox97
             // 
+            this.pictureBox97.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox97.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox97.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox97.Location = new System.Drawing.Point(337, 499);
@@ -498,6 +509,7 @@ namespace BatallaNaval
             // 
             // pictureBox96
             // 
+            this.pictureBox96.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox96.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox96.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox96.Location = new System.Drawing.Point(289, 499);
@@ -510,6 +522,7 @@ namespace BatallaNaval
             // 
             // pictureBox95
             // 
+            this.pictureBox95.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox95.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox95.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox95.Location = new System.Drawing.Point(241, 499);
@@ -522,6 +535,7 @@ namespace BatallaNaval
             // 
             // pictureBox94
             // 
+            this.pictureBox94.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox94.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox94.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox94.Location = new System.Drawing.Point(193, 499);
@@ -534,6 +548,7 @@ namespace BatallaNaval
             // 
             // pictureBox93
             // 
+            this.pictureBox93.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox93.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox93.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox93.Location = new System.Drawing.Point(145, 499);
@@ -546,6 +561,7 @@ namespace BatallaNaval
             // 
             // pictureBox92
             // 
+            this.pictureBox92.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox92.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox92.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox92.Location = new System.Drawing.Point(97, 499);
@@ -558,6 +574,7 @@ namespace BatallaNaval
             // 
             // pictureBox91
             // 
+            this.pictureBox91.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox91.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox91.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox91.Location = new System.Drawing.Point(49, 499);
@@ -570,6 +587,7 @@ namespace BatallaNaval
             // 
             // pictureBox90
             // 
+            this.pictureBox90.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox90.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox90.Location = new System.Drawing.Point(481, 449);
@@ -582,6 +600,7 @@ namespace BatallaNaval
             // 
             // pictureBox89
             // 
+            this.pictureBox89.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox89.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox89.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox89.Location = new System.Drawing.Point(433, 449);
@@ -594,6 +613,7 @@ namespace BatallaNaval
             // 
             // pictureBox88
             // 
+            this.pictureBox88.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox88.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox88.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox88.Location = new System.Drawing.Point(385, 449);
@@ -606,6 +626,7 @@ namespace BatallaNaval
             // 
             // pictureBox87
             // 
+            this.pictureBox87.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox87.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox87.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox87.Location = new System.Drawing.Point(337, 449);
@@ -618,6 +639,7 @@ namespace BatallaNaval
             // 
             // pictureBox86
             // 
+            this.pictureBox86.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox86.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox86.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox86.Location = new System.Drawing.Point(289, 449);
@@ -630,6 +652,7 @@ namespace BatallaNaval
             // 
             // pictureBox85
             // 
+            this.pictureBox85.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox85.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox85.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox85.Location = new System.Drawing.Point(241, 449);
@@ -642,6 +665,7 @@ namespace BatallaNaval
             // 
             // pictureBox84
             // 
+            this.pictureBox84.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox84.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox84.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox84.Location = new System.Drawing.Point(193, 449);
@@ -654,6 +678,7 @@ namespace BatallaNaval
             // 
             // pictureBox83
             // 
+            this.pictureBox83.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox83.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox83.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox83.Location = new System.Drawing.Point(145, 449);
@@ -666,6 +691,7 @@ namespace BatallaNaval
             // 
             // pictureBox82
             // 
+            this.pictureBox82.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox82.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox82.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox82.Location = new System.Drawing.Point(97, 449);
@@ -678,6 +704,7 @@ namespace BatallaNaval
             // 
             // pictureBox81
             // 
+            this.pictureBox81.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox81.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox81.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox81.Location = new System.Drawing.Point(49, 449);
@@ -690,6 +717,7 @@ namespace BatallaNaval
             // 
             // pictureBox80
             // 
+            this.pictureBox80.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox80.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox80.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox80.Location = new System.Drawing.Point(481, 399);
@@ -702,6 +730,7 @@ namespace BatallaNaval
             // 
             // pictureBox79
             // 
+            this.pictureBox79.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox79.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox79.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox79.Location = new System.Drawing.Point(433, 399);
@@ -714,6 +743,7 @@ namespace BatallaNaval
             // 
             // pictureBox78
             // 
+            this.pictureBox78.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox78.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox78.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox78.Location = new System.Drawing.Point(385, 399);
@@ -726,6 +756,7 @@ namespace BatallaNaval
             // 
             // pictureBox77
             // 
+            this.pictureBox77.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox77.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox77.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox77.Location = new System.Drawing.Point(337, 399);
@@ -738,6 +769,7 @@ namespace BatallaNaval
             // 
             // pictureBox76
             // 
+            this.pictureBox76.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox76.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox76.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox76.Location = new System.Drawing.Point(289, 399);
@@ -750,6 +782,7 @@ namespace BatallaNaval
             // 
             // pictureBox75
             // 
+            this.pictureBox75.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox75.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox75.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox75.Location = new System.Drawing.Point(241, 399);
@@ -762,6 +795,7 @@ namespace BatallaNaval
             // 
             // pictureBox74
             // 
+            this.pictureBox74.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox74.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox74.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox74.Location = new System.Drawing.Point(193, 399);
@@ -774,6 +808,7 @@ namespace BatallaNaval
             // 
             // pictureBox73
             // 
+            this.pictureBox73.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox73.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox73.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox73.Location = new System.Drawing.Point(145, 399);
@@ -786,6 +821,7 @@ namespace BatallaNaval
             // 
             // pictureBox72
             // 
+            this.pictureBox72.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox72.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox72.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox72.Location = new System.Drawing.Point(97, 399);
@@ -798,6 +834,7 @@ namespace BatallaNaval
             // 
             // pictureBox71
             // 
+            this.pictureBox71.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox71.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox71.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox71.Location = new System.Drawing.Point(49, 399);
@@ -810,6 +847,7 @@ namespace BatallaNaval
             // 
             // pictureBox70
             // 
+            this.pictureBox70.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox70.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox70.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox70.Location = new System.Drawing.Point(481, 349);
@@ -822,6 +860,7 @@ namespace BatallaNaval
             // 
             // pictureBox69
             // 
+            this.pictureBox69.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox69.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox69.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox69.Location = new System.Drawing.Point(433, 349);
@@ -834,6 +873,7 @@ namespace BatallaNaval
             // 
             // pictureBox68
             // 
+            this.pictureBox68.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox68.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox68.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox68.Location = new System.Drawing.Point(385, 349);
@@ -846,6 +886,7 @@ namespace BatallaNaval
             // 
             // pictureBox67
             // 
+            this.pictureBox67.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox67.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox67.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox67.Location = new System.Drawing.Point(337, 349);
@@ -858,6 +899,7 @@ namespace BatallaNaval
             // 
             // pictureBox66
             // 
+            this.pictureBox66.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox66.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox66.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox66.Location = new System.Drawing.Point(289, 349);
@@ -870,6 +912,7 @@ namespace BatallaNaval
             // 
             // pictureBox65
             // 
+            this.pictureBox65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox65.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox65.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox65.Location = new System.Drawing.Point(241, 349);
@@ -882,6 +925,7 @@ namespace BatallaNaval
             // 
             // pictureBox64
             // 
+            this.pictureBox64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox64.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox64.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox64.Location = new System.Drawing.Point(193, 349);
@@ -894,6 +938,7 @@ namespace BatallaNaval
             // 
             // pictureBox63
             // 
+            this.pictureBox63.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox63.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox63.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox63.Location = new System.Drawing.Point(145, 349);
@@ -906,6 +951,7 @@ namespace BatallaNaval
             // 
             // pictureBox62
             // 
+            this.pictureBox62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox62.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox62.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox62.Location = new System.Drawing.Point(97, 349);
@@ -918,6 +964,7 @@ namespace BatallaNaval
             // 
             // pictureBox61
             // 
+            this.pictureBox61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox61.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox61.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox61.Location = new System.Drawing.Point(49, 349);
@@ -930,6 +977,7 @@ namespace BatallaNaval
             // 
             // pictureBox60
             // 
+            this.pictureBox60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox60.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox60.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox60.Location = new System.Drawing.Point(481, 299);
@@ -942,6 +990,7 @@ namespace BatallaNaval
             // 
             // pictureBox59
             // 
+            this.pictureBox59.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox59.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox59.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox59.Location = new System.Drawing.Point(433, 299);
@@ -954,6 +1003,7 @@ namespace BatallaNaval
             // 
             // pictureBox58
             // 
+            this.pictureBox58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox58.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox58.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox58.Location = new System.Drawing.Point(385, 299);
@@ -966,6 +1016,7 @@ namespace BatallaNaval
             // 
             // pictureBox57
             // 
+            this.pictureBox57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox57.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox57.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox57.Location = new System.Drawing.Point(337, 299);
@@ -978,6 +1029,7 @@ namespace BatallaNaval
             // 
             // pictureBox56
             // 
+            this.pictureBox56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox56.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox56.Location = new System.Drawing.Point(289, 299);
@@ -990,6 +1042,7 @@ namespace BatallaNaval
             // 
             // pictureBox55
             // 
+            this.pictureBox55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox55.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox55.Location = new System.Drawing.Point(241, 299);
@@ -1002,6 +1055,7 @@ namespace BatallaNaval
             // 
             // pictureBox54
             // 
+            this.pictureBox54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox54.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox54.Location = new System.Drawing.Point(193, 299);
@@ -1014,6 +1068,7 @@ namespace BatallaNaval
             // 
             // pictureBox53
             // 
+            this.pictureBox53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox53.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox53.Location = new System.Drawing.Point(145, 299);
@@ -1026,6 +1081,7 @@ namespace BatallaNaval
             // 
             // pictureBox52
             // 
+            this.pictureBox52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox52.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox52.Location = new System.Drawing.Point(97, 299);
@@ -1038,6 +1094,7 @@ namespace BatallaNaval
             // 
             // pictureBox51
             // 
+            this.pictureBox51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox51.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox51.Location = new System.Drawing.Point(49, 299);
@@ -1050,6 +1107,7 @@ namespace BatallaNaval
             // 
             // pictureBox50
             // 
+            this.pictureBox50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox50.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox50.Location = new System.Drawing.Point(481, 249);
@@ -1062,6 +1120,7 @@ namespace BatallaNaval
             // 
             // pictureBox49
             // 
+            this.pictureBox49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox49.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox49.Location = new System.Drawing.Point(433, 249);
@@ -1074,6 +1133,7 @@ namespace BatallaNaval
             // 
             // pictureBox48
             // 
+            this.pictureBox48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox48.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox48.Location = new System.Drawing.Point(385, 249);
@@ -1086,6 +1146,7 @@ namespace BatallaNaval
             // 
             // pictureBox47
             // 
+            this.pictureBox47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox47.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox47.Location = new System.Drawing.Point(337, 249);
@@ -1098,6 +1159,7 @@ namespace BatallaNaval
             // 
             // pictureBox46
             // 
+            this.pictureBox46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox46.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox46.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox46.Location = new System.Drawing.Point(289, 249);
@@ -1110,6 +1172,7 @@ namespace BatallaNaval
             // 
             // pictureBox45
             // 
+            this.pictureBox45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox45.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox45.Location = new System.Drawing.Point(241, 249);
@@ -1122,6 +1185,7 @@ namespace BatallaNaval
             // 
             // pictureBox44
             // 
+            this.pictureBox44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox44.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox44.Location = new System.Drawing.Point(193, 249);
@@ -1134,6 +1198,7 @@ namespace BatallaNaval
             // 
             // pictureBox43
             // 
+            this.pictureBox43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox43.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox43.Location = new System.Drawing.Point(145, 249);
@@ -1146,6 +1211,7 @@ namespace BatallaNaval
             // 
             // pictureBox42
             // 
+            this.pictureBox42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox42.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox42.Location = new System.Drawing.Point(97, 249);
@@ -1158,6 +1224,7 @@ namespace BatallaNaval
             // 
             // pictureBox41
             // 
+            this.pictureBox41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox41.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox41.Location = new System.Drawing.Point(49, 249);
@@ -1170,6 +1237,7 @@ namespace BatallaNaval
             // 
             // pictureBox40
             // 
+            this.pictureBox40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox40.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox40.Location = new System.Drawing.Point(481, 199);
@@ -1182,6 +1250,7 @@ namespace BatallaNaval
             // 
             // pictureBox39
             // 
+            this.pictureBox39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox39.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox39.Location = new System.Drawing.Point(433, 199);
@@ -1194,6 +1263,7 @@ namespace BatallaNaval
             // 
             // pictureBox38
             // 
+            this.pictureBox38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox38.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox38.Location = new System.Drawing.Point(385, 199);
@@ -1206,6 +1276,7 @@ namespace BatallaNaval
             // 
             // pictureBox37
             // 
+            this.pictureBox37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox37.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox37.Location = new System.Drawing.Point(337, 199);
@@ -1218,6 +1289,7 @@ namespace BatallaNaval
             // 
             // pictureBox36
             // 
+            this.pictureBox36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox36.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox36.Location = new System.Drawing.Point(289, 199);
@@ -1230,6 +1302,7 @@ namespace BatallaNaval
             // 
             // pictureBox35
             // 
+            this.pictureBox35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox35.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox35.Location = new System.Drawing.Point(241, 199);
@@ -1242,6 +1315,7 @@ namespace BatallaNaval
             // 
             // pictureBox34
             // 
+            this.pictureBox34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox34.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox34.Location = new System.Drawing.Point(193, 199);
@@ -1254,6 +1328,7 @@ namespace BatallaNaval
             // 
             // pictureBox33
             // 
+            this.pictureBox33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox33.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox33.Location = new System.Drawing.Point(145, 199);
@@ -1266,6 +1341,7 @@ namespace BatallaNaval
             // 
             // pictureBox32
             // 
+            this.pictureBox32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox32.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox32.Location = new System.Drawing.Point(97, 199);
@@ -1278,6 +1354,7 @@ namespace BatallaNaval
             // 
             // pictureBox31
             // 
+            this.pictureBox31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox31.Location = new System.Drawing.Point(49, 199);
@@ -1290,6 +1367,7 @@ namespace BatallaNaval
             // 
             // pictureBox30
             // 
+            this.pictureBox30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox30.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox30.Location = new System.Drawing.Point(481, 152);
@@ -1302,6 +1380,7 @@ namespace BatallaNaval
             // 
             // pictureBox29
             // 
+            this.pictureBox29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox29.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox29.Location = new System.Drawing.Point(433, 152);
@@ -1314,6 +1393,7 @@ namespace BatallaNaval
             // 
             // pictureBox28
             // 
+            this.pictureBox28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox28.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox28.Location = new System.Drawing.Point(385, 152);
@@ -1326,6 +1406,7 @@ namespace BatallaNaval
             // 
             // pictureBox27
             // 
+            this.pictureBox27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox27.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox27.Location = new System.Drawing.Point(337, 152);
@@ -1338,6 +1419,7 @@ namespace BatallaNaval
             // 
             // pictureBox26
             // 
+            this.pictureBox26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox26.Location = new System.Drawing.Point(289, 152);
@@ -1350,6 +1432,7 @@ namespace BatallaNaval
             // 
             // pictureBox25
             // 
+            this.pictureBox25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox25.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox25.Location = new System.Drawing.Point(241, 152);
@@ -1362,6 +1445,7 @@ namespace BatallaNaval
             // 
             // pictureBox24
             // 
+            this.pictureBox24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox24.Location = new System.Drawing.Point(193, 152);
@@ -1374,6 +1458,7 @@ namespace BatallaNaval
             // 
             // pictureBox23
             // 
+            this.pictureBox23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox23.Location = new System.Drawing.Point(145, 152);
@@ -1386,6 +1471,7 @@ namespace BatallaNaval
             // 
             // pictureBox22
             // 
+            this.pictureBox22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox22.Location = new System.Drawing.Point(97, 152);
@@ -1398,6 +1484,7 @@ namespace BatallaNaval
             // 
             // pictureBox21
             // 
+            this.pictureBox21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox21.Location = new System.Drawing.Point(49, 152);
@@ -1410,6 +1497,7 @@ namespace BatallaNaval
             // 
             // pictureBox20
             // 
+            this.pictureBox20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox20.Location = new System.Drawing.Point(481, 101);
@@ -1422,6 +1510,7 @@ namespace BatallaNaval
             // 
             // pictureBox19
             // 
+            this.pictureBox19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox19.Location = new System.Drawing.Point(433, 101);
@@ -1434,6 +1523,7 @@ namespace BatallaNaval
             // 
             // pictureBox18
             // 
+            this.pictureBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox18.Location = new System.Drawing.Point(385, 101);
@@ -1446,6 +1536,7 @@ namespace BatallaNaval
             // 
             // pictureBox17
             // 
+            this.pictureBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox17.Location = new System.Drawing.Point(337, 101);
@@ -1458,6 +1549,7 @@ namespace BatallaNaval
             // 
             // pictureBox16
             // 
+            this.pictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox16.Location = new System.Drawing.Point(289, 101);
@@ -1470,6 +1562,7 @@ namespace BatallaNaval
             // 
             // pictureBox15
             // 
+            this.pictureBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox15.Location = new System.Drawing.Point(241, 101);
@@ -1482,6 +1575,7 @@ namespace BatallaNaval
             // 
             // pictureBox14
             // 
+            this.pictureBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox14.Location = new System.Drawing.Point(193, 101);
@@ -1494,6 +1588,7 @@ namespace BatallaNaval
             // 
             // pictureBox13
             // 
+            this.pictureBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox13.Location = new System.Drawing.Point(145, 101);
@@ -1506,6 +1601,7 @@ namespace BatallaNaval
             // 
             // pictureBox12
             // 
+            this.pictureBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox12.Location = new System.Drawing.Point(97, 101);
@@ -1518,6 +1614,7 @@ namespace BatallaNaval
             // 
             // pictureBox11
             // 
+            this.pictureBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox11.Location = new System.Drawing.Point(49, 101);
@@ -1530,6 +1627,7 @@ namespace BatallaNaval
             // 
             // pictureBox10
             // 
+            this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox10.Location = new System.Drawing.Point(481, 51);
@@ -1542,6 +1640,7 @@ namespace BatallaNaval
             // 
             // pictureBox9
             // 
+            this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox9.Location = new System.Drawing.Point(433, 51);
@@ -1554,6 +1653,7 @@ namespace BatallaNaval
             // 
             // pictureBox8
             // 
+            this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox8.Location = new System.Drawing.Point(385, 51);
@@ -1566,6 +1666,7 @@ namespace BatallaNaval
             // 
             // pictureBox7
             // 
+            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox7.Location = new System.Drawing.Point(337, 51);
@@ -1578,6 +1679,7 @@ namespace BatallaNaval
             // 
             // pictureBox6
             // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox6.Location = new System.Drawing.Point(289, 51);
@@ -1590,6 +1692,7 @@ namespace BatallaNaval
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox5.Location = new System.Drawing.Point(241, 51);
@@ -1602,6 +1705,7 @@ namespace BatallaNaval
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox4.Location = new System.Drawing.Point(193, 51);
@@ -1614,6 +1718,7 @@ namespace BatallaNaval
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Location = new System.Drawing.Point(145, 51);
@@ -1626,6 +1731,7 @@ namespace BatallaNaval
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Location = new System.Drawing.Point(97, 51);
@@ -1638,7 +1744,10 @@ namespace BatallaNaval
             // 
             // label12
             // 
+            this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label12.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(0, 50);
             this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
@@ -1649,7 +1758,10 @@ namespace BatallaNaval
             // 
             // label11
             // 
+            this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label11.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(480, 0);
             this.label11.Margin = new System.Windows.Forms.Padding(0);
             this.label11.Name = "label11";
@@ -1660,7 +1772,10 @@ namespace BatallaNaval
             // 
             // label10
             // 
+            this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(432, 0);
             this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
@@ -1671,7 +1786,10 @@ namespace BatallaNaval
             // 
             // label9
             // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(384, 0);
             this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
@@ -1682,7 +1800,10 @@ namespace BatallaNaval
             // 
             // label8
             // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(336, 0);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
@@ -1693,7 +1814,10 @@ namespace BatallaNaval
             // 
             // label7
             // 
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(288, 0);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
@@ -1704,7 +1828,10 @@ namespace BatallaNaval
             // 
             // label6
             // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(240, 0);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
@@ -1715,7 +1842,10 @@ namespace BatallaNaval
             // 
             // label5
             // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(192, 0);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
@@ -1726,7 +1856,10 @@ namespace BatallaNaval
             // 
             // label4
             // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(144, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
@@ -1737,7 +1870,10 @@ namespace BatallaNaval
             // 
             // label3
             // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(96, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
@@ -1748,7 +1884,10 @@ namespace BatallaNaval
             // 
             // label2
             // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(48, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
@@ -1759,6 +1898,7 @@ namespace BatallaNaval
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
@@ -1769,7 +1909,10 @@ namespace BatallaNaval
             // 
             // label13
             // 
+            this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label13.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(0, 100);
             this.label13.Margin = new System.Windows.Forms.Padding(0);
             this.label13.Name = "label13";
@@ -1780,7 +1923,10 @@ namespace BatallaNaval
             // 
             // label14
             // 
+            this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label14.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(0, 151);
             this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
@@ -1791,7 +1937,10 @@ namespace BatallaNaval
             // 
             // label15
             // 
+            this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label15.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(0, 198);
             this.label15.Margin = new System.Windows.Forms.Padding(0);
             this.label15.Name = "label15";
@@ -1802,7 +1951,10 @@ namespace BatallaNaval
             // 
             // label16
             // 
+            this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label16.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(0, 248);
             this.label16.Margin = new System.Windows.Forms.Padding(0);
             this.label16.Name = "label16";
@@ -1813,7 +1965,10 @@ namespace BatallaNaval
             // 
             // label17
             // 
+            this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label17.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(0, 298);
             this.label17.Margin = new System.Windows.Forms.Padding(0);
             this.label17.Name = "label17";
@@ -1824,7 +1979,10 @@ namespace BatallaNaval
             // 
             // label18
             // 
+            this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label18.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
             this.label18.Location = new System.Drawing.Point(0, 348);
             this.label18.Margin = new System.Windows.Forms.Padding(0);
             this.label18.Name = "label18";
@@ -1835,7 +1993,10 @@ namespace BatallaNaval
             // 
             // label19
             // 
+            this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label19.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
             this.label19.Location = new System.Drawing.Point(0, 398);
             this.label19.Margin = new System.Windows.Forms.Padding(0);
             this.label19.Name = "label19";
@@ -1846,7 +2007,10 @@ namespace BatallaNaval
             // 
             // label20
             // 
+            this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label20.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.White;
             this.label20.Location = new System.Drawing.Point(0, 448);
             this.label20.Margin = new System.Windows.Forms.Padding(0);
             this.label20.Name = "label20";
@@ -1857,7 +2021,10 @@ namespace BatallaNaval
             // 
             // label21
             // 
+            this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label21.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
             this.label21.Location = new System.Drawing.Point(0, 498);
             this.label21.Margin = new System.Windows.Forms.Padding(0);
             this.label21.Name = "label21";
@@ -1868,6 +2035,7 @@ namespace BatallaNaval
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(49, 51);
@@ -1880,20 +2048,24 @@ namespace BatallaNaval
             // 
             // cb_posicion
             // 
+            this.cb_posicion.BackColor = System.Drawing.SystemColors.Window;
             this.cb_posicion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_posicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_posicion.FormattingEnabled = true;
+            this.cb_posicion.ItemHeight = 20;
             this.cb_posicion.Items.AddRange(new object[] {
             "Horizontal",
             "Vertical"});
             this.cb_posicion.Location = new System.Drawing.Point(21, 489);
             this.cb_posicion.Name = "cb_posicion";
-            this.cb_posicion.Size = new System.Drawing.Size(283, 21);
+            this.cb_posicion.Size = new System.Drawing.Size(283, 28);
             this.cb_posicion.TabIndex = 4;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(18, 450);
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Location = new System.Drawing.Point(18, 467);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(47, 13);
             this.label22.TabIndex = 5;
@@ -1901,6 +2073,7 @@ namespace BatallaNaval
             // 
             // listView1
             // 
+            this.listView1.BackColor = System.Drawing.SystemColors.Window;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -1945,6 +2118,7 @@ namespace BatallaNaval
             // 
             // pb_music
             // 
+            this.pb_music.BackColor = System.Drawing.Color.Transparent;
             this.pb_music.Image = global::BatallaNaval.Properties.Resources.note2;
             this.pb_music.Location = new System.Drawing.Point(15, 612);
             this.pb_music.Name = "pb_music";
@@ -1956,6 +2130,7 @@ namespace BatallaNaval
             // 
             // tb_volume
             // 
+            this.tb_volume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(65)))), ((int)(((byte)(152)))));
             this.tb_volume.Location = new System.Drawing.Point(49, 626);
             this.tb_volume.Name = "tb_volume";
             this.tb_volume.Size = new System.Drawing.Size(104, 45);
@@ -1967,6 +2142,8 @@ namespace BatallaNaval
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(231)))), ((int)(((byte)(254)))));
+            this.BackgroundImage = global::BatallaNaval.Properties.Resources.fondo_juego;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(916, 683);
             this.Controls.Add(this.pb_music);
             this.Controls.Add(this.tb_volume);
@@ -1975,10 +2152,12 @@ namespace BatallaNaval
             this.Controls.Add(this.cb_posicion);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btn_comenzar);
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Inicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Batalla Naval";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Inicio_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);

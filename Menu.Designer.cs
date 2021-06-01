@@ -77,7 +77,7 @@ namespace BatallaNaval
             // 
             // tb_volume
             // 
-            this.tb_volume.BackColor = System.Drawing.Color.White;
+            this.tb_volume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(65)))), ((int)(((byte)(152)))));
             this.tb_volume.Location = new System.Drawing.Point(94, 412);
             this.tb_volume.Name = "tb_volume";
             this.tb_volume.Size = new System.Drawing.Size(104, 45);
