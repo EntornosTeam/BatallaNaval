@@ -95,6 +95,7 @@ namespace BatallaNaval
         {
             if (listView1.SelectedItems.Count == 0)
             {
+                this.Cursor = Cursors.No;
                 return;
             }
             else
@@ -130,8 +131,9 @@ namespace BatallaNaval
                         int filaActual = (horizontal) ? fila : fila + (x * d); // desplazamiento vertical
                         int columnaActual = (horizontal) ? columna + (x * d) : columna; // desplazamiento horizontal
                         string tag = filaActual.ToString() + "," + columnaActual.ToString();
-                        if (filaActual < 0 || columnaActual < 0) // Se sale por la izquierda
+                        if (filaActual < 0 || columnaActual < 0) // Se sale por la izquierda o arriba
                         {
+                            this.Cursor = Cursors.No;
                             return;
                         }
                         if (tablero.ComprobarCasilla(tag)[0] != -1) // Se encuentra un barco
@@ -144,6 +146,7 @@ namespace BatallaNaval
                             }
                             else
                             {
+                                this.Cursor = Cursors.No;
                                 return;
                             }
                         }
@@ -220,6 +223,7 @@ namespace BatallaNaval
                 {
                     int idBarco = tablero.ComprobarCasilla(fila + "," + columna)[0];
                     EliminaBarco(idBarco);
+                    this.Cursor = Cursors.Hand;
                 }
                 else // Click en casilla vacía
                 {
@@ -292,6 +296,7 @@ namespace BatallaNaval
                     PoderEmpezar();
                     prePintado = false;
                     barcoPrePintado.Clear();
+                    this.Cursor = cursorTrash;
                 }
             }
         }
