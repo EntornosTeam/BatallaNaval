@@ -35,10 +35,11 @@ namespace BatallaNaval
             this.tb_volume = new System.Windows.Forms.TrackBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pb_music = new System.Windows.Forms.PictureBox();
-            this.lbl_hundir = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.tb_volume)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_music)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_jugar
@@ -108,17 +109,15 @@ namespace BatallaNaval
             this.pb_music.TabStop = false;
             this.pb_music.Click += new System.EventHandler(this.pb_music_Click);
             // 
-            // lbl_hundir
+            // pictureBox2
             // 
-            this.lbl_hundir.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_hundir.Font = new System.Drawing.Font("Microsoft Sans Serif", 69.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_hundir.ForeColor = System.Drawing.Color.Black;
-            this.lbl_hundir.Location = new System.Drawing.Point(12, 9);
-            this.lbl_hundir.Name = "lbl_hundir";
-            this.lbl_hundir.Size = new System.Drawing.Size(463, 298);
-            this.lbl_hundir.TabIndex = 6;
-            this.lbl_hundir.Text = "Hundir la flota";
-            this.lbl_hundir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::BatallaNaval.Properties.Resources.fuente3;
+            this.pictureBox2.Location = new System.Drawing.Point(58, 74);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(336, 188);
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // Menu
             // 
@@ -128,7 +127,7 @@ namespace BatallaNaval
             this.BackgroundImage = global::BatallaNaval.Properties.Resources.fondomenu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(913, 478);
-            this.Controls.Add(this.lbl_hundir);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pb_music);
             this.Controls.Add(this.tb_volume);
@@ -145,6 +144,7 @@ namespace BatallaNaval
             ((System.ComponentModel.ISupportInitialize)(this.tb_volume)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_music)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,6 +157,6 @@ namespace BatallaNaval
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.TrackBar tb_volume;
         private System.Windows.Forms.PictureBox pb_music;
-        private System.Windows.Forms.Label lbl_hundir;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

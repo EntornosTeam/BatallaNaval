@@ -27,7 +27,6 @@ namespace BatallaNaval
         {
             InitializeComponent();
             pFonts.AddFontFile("../../Fonts/Pirate Ship.ttf");
-            lbl_hundir.Font = new Font(pFonts.Families[0], 53, FontStyle.Bold);
             btn_salir.Font = new Font(pFonts.Families[0], 12, FontStyle.Regular);
             btn_jugar.Font = new Font(pFonts.Families[0], 12, FontStyle.Regular);
         }

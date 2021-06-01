@@ -219,5 +219,17 @@
   <ItemGroup>
     <None Include="Resources\fondo_juego.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fuente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fuente2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fuente3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fuente4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
