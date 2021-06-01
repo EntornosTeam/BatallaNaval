@@ -119,8 +119,12 @@ namespace BatallaNaval
                     bool horizontal = cb_posicion.SelectedIndex == 0;
                     int d = ((horizontal && (columna - 1) + numCasillas > 9) || (!horizontal && (fila - 1) + numCasillas > 9)) ? -1 : 1; // si es 1, va a la derecha, si es -1, va a la izquierda
                     bool otroLadoProbado = false;
-                    // if (!ComprobarBarco(numCasillas)) return;
-
+                    if (!ComprobarBarco(numCasillas, false))
+                    {
+                        this.Cursor = Cursors.No;
+                        return;
+                    }
+                    this.Cursor = Cursors.Hand;
                     for (int x = 0; x < numCasillas; x++) // bucle comprobación casillas
                     {
                         int filaActual = (horizontal) ? fila : fila + (x * d); // desplazamiento vertical
@@ -223,7 +227,7 @@ namespace BatallaNaval
                     int d = ((horizontal && (columna - 1) + numCasillas > 9) || (!horizontal && (fila - 1) + numCasillas > 9)) ? -1 : 1; // si es 1, va a la derecha, si es -1, va a la izquierda
                     bool otroLadoProbado = false;
                     int id = Barco.lastId + 1;
-                    if (!ComprobarBarco(numCasillas)) return;
+                    if (!ComprobarBarco(numCasillas, true)) return;
 
                     for (int x = 0; x < numCasillas; x++) // bucle comprobación casillas
                     {
@@ -335,31 +339,40 @@ namespace BatallaNaval
             e.Cancel = true;
         }
 
-        private bool ComprobarBarco(int size)
+        private bool ComprobarBarco(int size, bool showError)
         {
             switch (size)
             {
                 case 1:
                     if (Barco.numFragatas + 1 > Barco.MAXFRAGATAS)
                     {
-                        MessageBox.Show("Se ha excedido el número máximo de fragatas.");
-                        error.Play();
+                        if (showError)
+                        {
+                            MessageBox.Show("Se ha excedido el número máximo de fragatas.");
+                            error.Play();
+                        }
                         return false;
                     }
                     break;
                 case 2:
                     if (Barco.numDestructores + 1 > Barco.MAXDESTRUCTORES)
                     {
-                        MessageBox.Show("Se ha excedido el número máximo de destructores.");
-                        error.Play();
+                        if (showError)
+                        {
+                            MessageBox.Show("Se ha excedido el número máximo de destructores.");
+                            error.Play();
+                        }
                         return false;
                     }
                     break;
                 case 3:
                     if (Barco.numSubmarinos + 1 > Barco.MAXSUBMARINOS)
                     {
-                        MessageBox.Show("Se ha excedido el número máximo de submarinos.");
-                        error.Play();
+                        if (showError)
+                        {
+                            MessageBox.Show("Se ha excedido el número máximo de submarinos.");
+                            error.Play();
+                        }
                         return false;
                     }
 
@@ -367,8 +380,11 @@ namespace BatallaNaval
                 case 4:
                     if (Barco.numPortaaviones + 1 > Barco.MAXPORTAAVIONES)
                     {
-                        MessageBox.Show("Se ha excedido el número máximo de portaaviones.");
-                        error.Play();
+                        if (showError)
+                        {
+                            MessageBox.Show("Se ha excedido el número máximo de portaaviones.");
+                            error.Play();
+                        }
                         return false;
                     }
 
