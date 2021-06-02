@@ -27,8 +27,17 @@ namespace BatallaNaval
             Properties.Resources.Crucero1, Properties.Resources.Crucero2,
             Properties.Resources.Submarino1, Properties.Resources.Submarino2, Properties.Resources.Submarino3,
             Properties.Resources.portaaviones1, Properties.Resources.portaaviones2, Properties.Resources.portaaviones3, Properties.Resources.portaaviones4};
+        public List<Bitmap> imagest = new List<Bitmap>() {
+            Properties.Resources.Fragatat,
+            Properties.Resources.Crucero1t, Properties.Resources.Crucero2t,
+            Properties.Resources.Submarino1t, Properties.Resources.Submarino2t, Properties.Resources.Submarino3t,
+            Properties.Resources.portaaviones1t, Properties.Resources.portaaviones2t, Properties.Resources.portaaviones3t, Properties.Resources.portaaviones4t};
+        public List<Bitmap> imagesvt = new List<Bitmap>() {
+            Properties.Resources.Fragatat,
+            Properties.Resources.Crucero1t, Properties.Resources.Crucero2t,
+            Properties.Resources.Submarino1t, Properties.Resources.Submarino2t, Properties.Resources.Submarino3t,
+            Properties.Resources.portaaviones1t, Properties.Resources.portaaviones2t, Properties.Resources.portaaviones3t, Properties.Resources.portaaviones4t};
         public bool play = false;
-        private Cursor cursorTrash = new Cursor(Properties.Resources.trash.Handle);
         public bool prePintado = false;
         public List<PictureBox> barcoPrePintado = new List<PictureBox>();
         WindowsMediaPlayer music = new WindowsMediaPlayer();
@@ -47,6 +56,10 @@ namespace BatallaNaval
             cb_posicion.SelectedIndex = 0;
             barcos = new List<Barco>();
             foreach (Bitmap img in imagesv)
+            {
+                img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+            }
+            foreach (Bitmap img in imagesvt)
             {
                 img.RotateFlip(RotateFlipType.Rotate90FlipNone);
             }
@@ -112,7 +125,7 @@ namespace BatallaNaval
 
                 if (tablero.ComprobarCasilla(fila + "," + columna)[0] != -1) // Hover en barco
                 {
-                    this.Cursor = cursorTrash;
+                    this.Cursor = new Cursor(Properties.Resources.trash.Handle); ;
                     return;
                 }
                 else // Click en casilla vacía
@@ -175,7 +188,7 @@ namespace BatallaNaval
                         int columnaActual = (horizontal) ? columna + (x * d) : columna; // desplazamiento horizontal
                         string tag = filaActual.ToString() + "," + columnaActual.ToString();
                         PictureBox pbPintar = ObtenerPictureBox(tag);
-                        pbPintar.BackgroundImage = (horizontal) ? images[imagenBarco] : imagesv[imagenBarco];
+                        pbPintar.BackgroundImage = (horizontal) ? imagest[imagenBarco] : imagesvt[imagenBarco];
                         //pbPintar.BackColor = ObtenerColor(numCasillas);
                         imagenBarco = (d == -1) ? imagenBarco - 1 : imagenBarco + 1;
                         barcoPrePintado.Add(pbPintar);
@@ -296,7 +309,7 @@ namespace BatallaNaval
                     PoderEmpezar();
                     prePintado = false;
                     barcoPrePintado.Clear();
-                    this.Cursor = cursorTrash;
+                    this.Cursor = new Cursor(Properties.Resources.trash.Handle);
                 }
             }
         }
@@ -353,8 +366,8 @@ namespace BatallaNaval
                     {
                         if (showError)
                         {
-                            MessageBox.Show("Se ha excedido el número máximo de fragatas.");
                             error.Play();
+                            MessageBox.Show("Se ha excedido el número máximo de fragatas.");
                         }
                         return false;
                     }
@@ -364,8 +377,8 @@ namespace BatallaNaval
                     {
                         if (showError)
                         {
-                            MessageBox.Show("Se ha excedido el número máximo de destructores.");
                             error.Play();
+                            MessageBox.Show("Se ha excedido el número máximo de destructores.");
                         }
                         return false;
                     }
@@ -375,8 +388,8 @@ namespace BatallaNaval
                     {
                         if (showError)
                         {
-                            MessageBox.Show("Se ha excedido el número máximo de submarinos.");
                             error.Play();
+                            MessageBox.Show("Se ha excedido el número máximo de submarinos.");
                         }
                         return false;
                     }
@@ -387,8 +400,8 @@ namespace BatallaNaval
                     {
                         if (showError)
                         {
-                            MessageBox.Show("Se ha excedido el número máximo de portaaviones.");
                             error.Play();
+                            MessageBox.Show("Se ha excedido el número máximo de portaaviones.");
                         }
                         return false;
                     }

@@ -236,6 +236,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Cursors\trash.ico" />
+    <None Include="Resources\barcos-transparentes\portaaviones1t.png" />
+    <None Include="Resources\barcos-transparentes\Fragatat.png" />
+    <None Include="Resources\barcos-transparentes\Crucero2t.png" />
+    <None Include="Resources\barcos-transparentes\Submarino3t.png" />
+    <None Include="Resources\barcos-transparentes\Submarino2t.png" />
+    <None Include="Resources\barcos-transparentes\Submarino1t.png" />
+    <None Include="Resources\barcos-transparentes\portaaviones4t.png" />
+    <None Include="Resources\barcos-transparentes\portaaviones3t.png" />
+    <None Include="Resources\barcos-transparentes\portaaviones2t.png" />
+    <None Include="Resources\barcos-transparentes\Crucero1t.png" />
+    <None Include="Resources\barcos-transparentes\Crucero1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
